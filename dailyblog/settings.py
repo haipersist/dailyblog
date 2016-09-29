@@ -78,7 +78,7 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1','dailyblog.applinzi.com']
 if  DEBUG:
     DB_NAME = 'app_dailyblog'
     MYSQL_USER = 'root'
-    MYSQL_PWD =  '320623'
+    MYSQL_PWD =  '*****'
     MYSQL_PORT = ''
     MYSQL_HOST = ''
     DOMAIN = 'http://localhost:8080'
@@ -243,7 +243,7 @@ CACHES = {
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.sina.com'
-EMAIL_HOST_PASSWORD = 'qyqx_1314'
+EMAIL_HOST_PASSWORD = '****'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'qyqx_1314@sina.com'
 EMAIL_SUBJECT_PREFIX = u'海波'
