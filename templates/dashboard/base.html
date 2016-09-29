@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {%block title%}{% endblock %}
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" media="screen" href="/static/dashboard/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="/static/dashboard/css/bootstrap-theme.min.css">
+
+        {%block css%} {%endblock%}
+        <!-- Bootstrap Admin Theme -->
+        <link rel="stylesheet" media="screen" href="/static/dashboard/css/bootstrap-admin-theme.css">
+
+        <link rel="stylesheet" media="screen"
+              href="/static/dashboard/css/bootstrap-admin-theme-change-size.css">
+
+
+        <link rel="shortcut icon" href="/static/img/hbnn.ico"/>
+        <link rel="bookmark" href="/static/img/hbnn.ico"/>
+        <!-- Vendors -->
+
+        {% block js %}{% endblock %}
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+           <script type="text/javascript" src="/static/dashboard/js/html5shiv.js"></script>
+           <script type="text/javascript" src="/static/dashboard/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+<body class="bootstrap-admin-with-small-navbar">
+  <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/modules/data.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+
+<!-- Additional files for the Highslide popup effect -->
+<script src="https://www.highcharts.com/samples/static/highslide-full.min.js"></script>
+<script src="https://www.highcharts.com/samples/static/highslide.config.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="https://www.highcharts.com/samples/static/highslide.css" />
+        <!-- small navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar-sm" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+
+
+                                <li >
+                                    <a href="#"><i class="glyphicon glyphicon-user"></i> {{user.username}}</a>
+                                   </li>
+                                        <li><a href="/account/logout/">退出</a></li>
+                                 <li>
+                                    <a href="/">回到首页</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- main / large navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar bootstrap-admin-navbar-under-small" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Dashboard</a>
+                        </div>
+                        <div class="collapse navbar-collapse main-navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Link</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </nav>
+
+        <div class="container">
+            <!-- left, vertical navbar & content -->
+            <div class="row">
+                <!-- left, vertical navbar -->
+                <div class="col-md-3 bootstrap-admin-col-left">
+                    <ul class="nav navbar-collapse collapse bootstrap-admin-navbar-side navbar-dashboard">
+                        <li>
+                            <a href="/article/blogintroduce.html"><i class="glyphicon glyphicon-chevron-right"></i> 网站介绍</a>
+                        </li>
+                        <li class="active">
+                            <a href="/dashboard/"><i class="glyphicon glyphicon-chevron-right"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="glyphicon glyphicon-chevron-down"></i> 个人信息</a>
+                            <ul class="nav navbar-collapse bootstrap-admin-navbar-side">
+                                <li><a href="/dashboard/profile/"><i class="glyphicon glyphicon-chevron-right"></i> 修改密码</a></li>
+                                <li><a href="/dashboard/profileinfo/"><i class="glyphicon glyphicon-chevron-right"></i>修改个人资料 </a></li>
+                            </ul>
+                        </li>
+                         <li>
+                            <a href="#"><i class="glyphicon glyphicon-chevron-down"></i> 文章信息</a>
+                            <ul class="nav navbar-collapse bootstrap-admin-navbar-side">
+                                <li><a href="/dashboard/article/add/"><i class="glyphicon glyphicon-chevron-right"></i> 添加文章</a></li>
+                                <li><a href="/dashboard/articles/"><i class="glyphicon glyphicon-chevron-right"></i>文章管理</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/dashboard/send_mail/"><i class="glyphicon glyphicon-chevron-right"></i>发邮件给博主</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- content -->
+                <div class="col-md-9">
+                   {%block content%}
+                 {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="dashfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                            <p class="left">Haibo Website</p>
+                    </div>
+                    <div class="col-md-4">
+                            <p class="right">&copy; 2016</p>
+                    </div>
+                     <div class="col-md-4">
+                            <p class="right">首页</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type="text/javascript" src="/static/dashboard/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/dashboard/js/twitter-bootstrap-hover-dropdown.min.js"></script>
+        <script type="text/javascript" src="/static/dashboard/js/bootstrap-admin-theme-change-size.js"></script>
+        <script type="text/javascript" src="/static/dashboard/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
+        {%block bodyscript %} {% endblock %}
+        <script type="text/javascript">
+            $(function() {
+                // Easy pie charts
+                $('.easyPieChart').easyPieChart({animate: 1000});
+            });
+        </script>
+    </body>
+</html>

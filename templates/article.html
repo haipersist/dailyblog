@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{%block title%}
+<title>{{website_name}}&nbsp;|&nbsp;{{article.title}}</title>
+<audio controls="controls" autoplay="autoplay" hidden="true" loop="loop">
+  <source src="http://dailyblog-dailyblog.stor.sinaapp.com/%E5%A4%96%E5%9B%BD%E5%A6%B9%E5%AD%90%E5%80%BE%E6%83%85%E7%BF%BB%E5%94%B1%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB.mp3" type="audio/mpeg" />
+</audio>
+{% endblock %}
+
+{% block main %}
+
+{% url 'category-article-list-view' article.category.alias as category_url %}
+
+<div class="row">
+    <div id="article-content" class="col-md-8 col-lg-9">
+        <div id="article-page" class="well">
+            <div id="article">
+                <div class="article-title">
+                    <h1 align="center" style="color: #01ab01">{{article.title}}</h1>
+                </div>
+             <ol class="breadcrumb">
+               <li><a>
+                    <span style="color: rgba(171, 43, 22, 0.65)" class="glyphicon glyphicon-user">作者：</span> {{article.author}}
+                </a></li>
+                <li><span style="color:  rgba(171, 43, 22, 0.65)">分类：</span><a href="{{category_url}}">{{article.category}}</a></li>
+                <li class="hidden-xs"><a><span style="color: rgba(171, 43, 22, 0.65)" >发布时间：</span> {{article.pub_time|date:"Y-m-d"}}</a></li>
+                <li class="pull-right hidden-xs"><a>
+                    <span style="color:  rgba(171, 43, 22, 0.65)">访问量：</span>
+                    {{article.read_times}}
+                </a></li>
+
+            </ol>
+                <div class="article-tags">
+                    {% for tag in article.tag_list%}
+                    <a href="{% url 'tag-article-list-view' tag %}">
+                        <span class="label label-dailyblog-{{forloop.counter}} btn">{{tag}}</span>
+                    </a>
+                    {% endfor %}
+                </div>
+                <hr/>
+                <div class="article-content">
+                    {% autoescape off%}
+                    {{article.content_html|safe}}
+                    {% endautoescape %}
+                </div>
+                <br>
+
+                <ul class="paper">
+                    {% if  article.pre_article %}
+                        <li class="previous">【上一篇】
+                            <a href="{{article.pre_article.absolute_url}}">&rarr;{{article.pre_article.title}}</a>
+                        </li>
+
+                    {% endif %}
+                    {% if  article.next_article %}
+                        <li class="next">【下一篇】
+                            <a href="{{article.next_article.absolute_url}}">&rarr;{{article.next_article.title}}</a>
+                        </li>
+
+                    {% endif %}
+                </ul>
+                 {% include "include/share.html"%}
+                <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="{{  article.id }}" data-title="{{ article.title }}" data-url="{{article.absolute_url}}"></div>
+<!-- 多说评论框 end -->
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div id="vmaig-side" class="col-md-4 col-lg-3 hidden-xs">
+          {% include "include/search.html"%}
+          {% include "include/author_info.html"%}
+          {% include "include/hottest_articles.html"%}
+          {% include "include/latest_comments.html"%}
+
+    </div>
+</div>
+{% endblock %}
+
+{% block css%}
+<link type="text/css" rel="stylesheet" href="/static/syntaxhighlighter/styles/shCoreDefault.css"/>
+<style type="text/css">
+    #article {
+        font-size:14px;
+        color:#000;
+    }
+
+    blockquote {
+        font-size:14px;
+    }
+</style>
+{% endblock %}
+
+
+{% block js%}
+<script type="text/javascript" src="/static/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="/static/syntaxhighlighter/scripts/shBrushCpp.js"></script>
+<script type="text/javascript" src="/static/syntaxhighlighter/scripts/shBrushJava.js"></script>
+<script type="text/javascript" src="/static/syntaxhighlighter/scripts/shBrushPython.js"></script>
+<script type="text/javascript" src="/static/syntaxhighlighter/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="/static/syntaxhighlighter/scripts/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="/static/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+{% endblock%}
