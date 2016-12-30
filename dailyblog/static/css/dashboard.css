@@ -1,0 +1,546 @@
+html, body{ overflow-x: auto; overflow-y: auto;}
+
+body {
+    font-family:"Microsoft YaHei","WenQuanYi Micro Hei","tohoma,sans-serif";
+    color: #060505;
+    font-size:14px;
+    margin: 0px;
+
+}
+
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: " | ";
+    padding: 0 5px;
+}
+
+.authore_info {
+    color: rgba(22, 98, 194, 0.73);
+}
+
+header {
+    font-size:16px;
+}
+
+/*使footer置于底部*/
+body,html {
+    margin: 0;
+    padding: 0;
+    height:100%;
+}
+
+#dailyblog-main{
+    position: relative;
+    min-height:100%;
+    padding:30px 0px;
+    _height:100%; /* for ie6 因为ie6不支持min-height */
+}
+
+#dailyblog-content {
+    padding: 10px;
+    padding-bottom: 100px;  /* 不至被footer盖住 */
+}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family:"Microsoft YaHei","WenQuanYi Micro Hei","tohoma,sans-serif";
+    font-weight: 700;
+}
+
+a {
+    color: #000000;
+}
+
+a:focus{
+    color:#D9534F;
+    text-decoration:none;
+}
+
+a:hover{
+    color:#D9534F;
+    text-decoration:none;
+}
+
+.active {
+    font-size:16px;
+    font-weight:bold;
+    color: #ff8418;
+    background-color: #00FFFF;
+}
+
+.logion {
+    font-size: 15px;
+    color: #161313;
+
+}
+
+#dailyblog{
+    padding-top:50px;
+}
+
+
+.display-none {
+    display:none;
+}
+
+.vmaig-header.navbar{
+    font-size:18px;
+}
+
+#myfooter {
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(9, 3, 9, 0.93);
+    border-top-color: rgba(45, 84, 19, 0.06);
+    margin-top: 10px;
+    margin-bottom: -30px;
+}
+.footerli >li >a {
+    color: #0000ee;
+}
+
+.well {
+    background-color:#FFF;
+    box-shadow:0px 0px 20px #222;
+}
+
+.padding10 {
+    padding:10px;
+}
+
+.margin4 {
+    margin:4px;
+}
+
+/*向左移动20px*/
+.left20px{
+    margin-left:-20px;
+}
+
+/*下滑线*/
+.underline{
+    border-bottom:1px solid #eee;
+}
+
+/*标签样式*/
+.label-dailyblog{
+    background-color:#D94600;
+}
+
+/*按钮样式*/
+.btn-dailyblog{
+    color: #FFF;
+    background-color: #3888d9;
+}
+
+/*label样式*/
+.label-dailyblog-1 {
+    background-color: #428bca;
+    font-size: 12px;
+}
+
+.label-dailyblog-2 {
+    background-color: #5cb85c;
+    font-size: 12px;
+}
+
+.label-dailyblog-3 {
+    background-color: #f0ad4e;
+    font-size: 12px;
+}
+
+.label-dailyblog-4 {
+    background-color: #5bc0de;
+}
+
+.label-dailyblog-5 {
+    background-color: #d9534f;
+}
+
+.label-dailyblog-6 {
+    background-color: #999;
+}
+
+.share {
+    margin-top: 30px;
+}
+
+.paper >li >a{
+    color: #0000ee;
+}
+.paper >li {
+     margin-bottom: 8px;
+}
+
+/*警告框样式*/
+.alert-vmaig{
+    color: #8A6D3B;
+    background-color: #FCF8E3;
+    border-color: #FAEBCC;
+    margin-bottom:5px;
+}
+
+/*panel 样式*/
+.panel-dailyblog{
+    box-shadow: 0px 0px 5px #C2C2C2;
+    border-color:#EEE;
+}
+
+#author_info_list {
+    color: #000000;
+    font-size: 14px;
+}
+.panel-dailyblog .panel-heading{
+    color: #EEE;
+    background-color: #4178ff;
+    border-color: #EEE;
+}
+
+.panel-dailyblog .panel-heading{
+    color: #EEE;
+    background-color: #4178ff;
+    border-color: #EEE;
+}
+
+.panel-dailyblog .input-group-addon{
+    color: #EEE;
+    background-color: #3D4450;
+    border:2px solid #3D4450;
+}
+
+.panel-dailyblog .badge{
+    background-color: #d9170f;
+}
+
+.panel-dailyblog span.btn{
+    padding:0px;
+    margin-right:5px;
+}
+
+
+/***********************/
+
+/*对话框样式标签*/
+.pre-cat{
+    float:left;
+    margin-right:10px;
+    position:relative;
+}
+
+.pre-catinner{
+    background-color: #3cbc49;
+    padding:4px;
+    border-radius:5px;
+    font-size:14px;
+    color:#EEE;
+}
+
+.pre-catarrow{
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    font-size: 0px;
+    line-height: 0;
+    border-width: 4px;
+    border-style: solid;
+    border-image: none;
+    right: -8px;
+    top: 10px;
+    border-color: transparent transparent transparent #1fd926;
+}
+/****************/
+
+
+/* home post块内容 */
+.home-post{
+    position:relative;
+    margin-bottom:20px;
+    padding-bottom:20px;
+    display:block;
+}
+
+.home-post .post-title{
+    margin-bottom:10px;
+    padding-bottom:10px;
+}
+
+.home-post .post-title>h1{
+    margin-top:0px;
+    margin-bottom:0px;
+    padding-top:3px;
+    font-size:20px;
+    height:30px;
+    line-height:30px;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.home-post .post-tag{
+    text-align:center;
+    line-height:24px;
+}
+
+.home-post .post-content{
+    padding:0px 0px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.home-post .post-content .thumbnail{
+    border:1px solid #ED9C29;
+    padding:0px;
+}
+
+.home-post .post-info{
+    margin-top:15px;
+}
+
+.home-post .post-info > span{
+    margin-right:5px;
+    color: #0000ee;
+}
+
+.home-post .post-info .post-tags{
+    float:right;
+}
+
+
+.home-post .post-content .row .col-sm-11 {
+    padding-right:5px;
+    padding-left:5px;
+    font-size: 16px;
+}
+
+.home-post .post-content .row .col-sm-11>p{
+    font-size: 15px;
+}
+/***********************************/
+
+
+/**************************/
+
+/*nav中 login弹出窗口中的样式*/
+#login-button {
+    float:right;
+}
+
+#forgetpassword {
+    float:right;
+}
+
+#forgetpassword a {
+    color:red;
+    font-size:14px;
+    line-height:30px;
+}
+
+/**************************/
+
+/*首页右侧登陆界面样式*/
+.login-form{
+    padding:30px 20px;
+}
+
+.login-form .btn{
+    width:48%;
+    padding:10px;
+}
+
+/**************/
+
+/*首页右侧的 search 样式*/
+.search{
+    padding:8px;
+    margin-bottom:30px;
+    border-radius:4px;
+    color: #FFF;
+    background-color: #138ef1;
+    border-color: #EEE;
+    box-shadow: 0px 0px 5px #C2C2C2;
+}
+
+.search input{
+    width:75% !important;
+    float:left;
+    margin-right:5px;
+}
+.search button {
+    color: #1e1520;
+}
+
+
+.share {
+    color: #252fcc;
+}
+
+/*************************/
+
+
+/*首页右侧的 热门文章面板样式*/
+.hotest-post-title{
+    display:inline-block;
+    overflow:hidden;
+    width:80%;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+
+.tab-content{
+    padding:10px;
+}
+
+.tab-content .label{
+    display:block;
+    float:left;
+    margin:5px;
+}
+
+.list-group-item{
+    border:solid inset #EEE;
+}
+.list-group-item >a {
+    color: #0000ee;
+}
+.list-group-item >a:hover{
+    color: #ee911b;
+}
+
+.navbar-dailyblog{
+    #margin: -50px 0 0 0 ;
+    top: 0px;
+    position: absolute;
+
+}
+
+.navbar-dailyblog .navbar-brand{
+    font-weight:bold;
+    font-size:25px;
+    margin-right:20px;
+    color: #100d0f;
+    text-shadow: 2px 5px 5px #161cff;
+
+}
+.navbar-nav > ul >li >a:hover {
+    color: #ee7920;
+
+
+}
+
+
+
+/*文章中内容的样式******/
+.article-content {
+
+    max-width:100%;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.article-title h1{
+    font-size:33px;
+
+}
+
+.article-title {
+    margin-bottom: 20px;
+    margin-top: -15px;
+}
+
+/***********************/
+
+
+/*轮播*/
+
+#myCarousel {
+    margin-bottom:20px;
+}
+
+.carousel-control .glyphicon {
+    top:20%;
+}
+
+.carousel-indicators {
+    left: 100%;
+    width: 30%;
+}
+
+/***********************/
+
+/*nav中注册登陆*/
+#register-modal .alert{
+   margin:15px;
+   padding:10px;
+}
+
+#login-modal .alert{
+   margin:15px;
+   padding:10px;
+}
+/***********************/
+
+/*分页*/
+
+.pageer {
+    font-size:16px;
+    font-weight:bold;
+}
+
+.pager .page-number {
+    font-size:16px;
+    font-weight:bold;
+    color:#FFFF00;
+    text-shadow: 2px 2px 2px #000, 0px 0px 10px #fff, 0px 0px 20px #fff;
+}
+.pager .abled  >a {
+    color: #0000ee !important;
+}
+
+.pager .nextabled  >a {
+    color: #0000ee !important;
+}
+
+.pagination-medium > li > a {
+  padding: 8px 14px;
+  font-size: 14px !important;
+
+/***********************/
+
+.screen-tx {
+    width:400px;
+    height:300px;
+    background:#e2e2e2;
+}
+
+
+
+
+#links a{
+    margin-bottom: 5px;
+}
+
+#blog-register {
+    width: 300px !important;
+    float: none;
+    display: block;
+    background-color: #0000ee;
+
+}
+#register-form {
+    background-color: #0000ee;
+}
+
+
+#blog-login {
+    width: 400px;
+    height: 600px;
+    float: none;
+    padding-bottom: 55px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

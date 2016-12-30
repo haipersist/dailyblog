@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{%block title%}
+<title>{{website_name}}</title>
+{% endblock %}
+{%block main%}
+<div class="row">
+    <div class="col-md-8 col-lg-9">
+        <!-- 警告框 -->
+        <div class="well logion">
+            {{logion}}
+        </div>
+
+        <!-- 首页文章列表 -->
+        <div id="main-content">
+            <!-- 首页轮播 -->
+
+
+            {% if not keyword %}
+            {% if carousel_page_list%}
+            {% include "include/carousel.html"%}
+            {% endif %}
+            {% endif %}
+
+
+            <!--首页文章列表 -->
+            {% if article_list %}
+            {% with post_list=article_list %}
+            {% for post in post_list %}
+                {% include "include/home_post.html" %}
+            {% endfor %}
+            {% endwith %}
+            {% endif %}
+
+
+            <!--分页 -->
+            {% if page_obj%}
+            {% include "include/pagination.html"%}
+            {% endif %}
+        </div>
+    </div>
+
+
+    <!-- 右边的sidebar -->
+    <div class="col-md-4 col-lg-3 hidden-xs">
+      {% include "include/search.html"%}
+       {% include "include/author_info.html"%}
+      {% include "include/hottest_articles.html"%}
+      {% include "include/latest_comments.html"%}
+
+    </div>
+</div>
+{% endblock %}

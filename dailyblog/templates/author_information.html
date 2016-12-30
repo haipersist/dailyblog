@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    {% load cache %}
+    <meta charset="UTF-8">
+    <!--手机html -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <link rel="shortcut icon" href="/static/img/hbnn.ico"/>
+    <link rel="bookmark" href="/static/img/hbnn.ico"/>
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/blogstyle.css">
+    <link rel="stylesheet" href="/static/jquery/jquery.Jcrop.min.css">
+
+    <script src="/static/jquery/jquery-2.1.3.min.js"></script>
+    <script src="/static/jquery/jquery.cookie.js"></script>
+    <script src="/static/jquery/jquery.form.js"></script>
+    <script src="/static/jquery/jquery.Jcrop.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+     <title>作者信息</title>
+        <audio controls="controls" autoplay="autoplay" hidden="true" loop="loop">
+  <source src="http://dailyblog-dailyblog.stor.sinaapp.com/%E5%A4%96%E5%9B%BD%E5%A6%B9%E5%AD%90%E5%80%BE%E6%83%85%E7%BF%BB%E5%94%B1%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB.mp3" type="audio/mpeg" />
+</audio>
+     <style type="text/css">
+        * { margin: 0; padding: 0; }
+        .clear { clear: both; }
+        .email {color: #0000cc}
+        .email:hover {color: #cc7428  }
+        #page-wrap { width: 800px; margin: 40px auto 60px; }
+        #pic { float: right; margin: -30px 0 0 0; }
+        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        #objective { width: 500px; float: left; }
+        #objective p { font-family:Georgia, Serif; font-style: italic; color: #666;font-size: 16px }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+        dd { width: 600px; float: right; }
+        dd.clear { float: none; margin: 0; height: 15px; }
+     </style>
+</head>
+<body id="dailyblog">
+    <!-- 导航栏 -->
+
+    {% include "include/nav.html"%}
+
+    <!-- 文章列表 与 侧边的东西 -->
+    <div id="dailyblog-main">
+        <div id="dailyblog-content" class="container">
+<div id="article-page" class="well">
+             <div id="page-wrap">
+
+        <img src="http://hbnnlove-hbnnlove.stor.sinaapp.com/726049968189011848.jpg " width="245" height="250" alt="Photo of Cthulu" id="pic" />
+
+        <div id="contact-info" class="vcard">
+
+            <!-- Microformats! -->
+
+            <h1 class="fn">王海波</h1>
+
+            <p>
+                QQ:393993705<br>
+                Email: <a class="email" href="mailto:haibo_persist@sina.co">haibo_persist@sina.com</a><br>
+                微博：<a class="email" href="http://weibo.com/u/2721409931?is_all=1">一窗昏晓_送流年</a>
+            </p>
+        </div>
+
+        <div id="objective">
+            <p>
+                懂得珍惜，常怀感恩，与人为善，愿用一颗热忱的心去感染别人，永远铭记给予是一种快乐。愿意去做一切我喜欢做的事，如果选择了远方，便定会风雨兼程。
+                人生嘛，就需要活出精彩，活出自我！
+            </p>
+        </div>
+
+        <div class="clear"></div>
+
+        <dl>
+            <dd class="clear"></dd>
+
+            <dt>教育背景</dt>
+            <dd>
+                <p><strong>硕士:</strong>北京交通大学 （2012-2015）</p>
+                <p><strong>专业:</strong> 通信<br /></p>
+            </dd>
+            <dd>
+                <p><strong>本科:</strong>北京交通大学（2008-2012）</p>
+                <p><strong>专业:</strong> 电子通信<br />
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>个人技能</dt>
+            <dd>
+                <ul>
+                    <li>熟练掌握Python语言，C语言；</li>
+                    <li>熟悉Linux系统，Shell脚本；</li>
+                    <li>熟悉MySQL，Redis，Memcached等；</li>
+                    <li>熟悉Flask框架，研读过源码；熟练使用Django框架；</li>
+                    <li>熟悉TCP/IP协议，掌握HTTP协议；</li>
+                    <li>熟悉HTML、CSS，JavaScript，Jquery等前端知识；</li>
+                    <li>熟悉Xpath、正则表达式。</li>
+                    <li>熟练使用Fabric，Beautifulsoup，paramiko,ansible等常用Python模块和框架。</li>
+                    <li>热爱尝试不同技术，开发过微信公众号、爬虫和Python GUI桌面软件等。</li>
+                </ul>
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>项目经验</dt>
+            <dd>
+                 <h2>2016.03—2016.6                 Django个人博客开发</h2>
+                 <ul>
+                     <li><strong>职责:</strong>完成系统架构设计，前后端的开发。</li>
+                    <li><strong>实现功能：</strong>用户注册，登录，退出、文章编辑，修改，删除等；自定义用户管理后台.</li>
+                    <li><strong>使用技术：</strong>Django+Bootstrap+Jquery+Nginx+uwsgi等。</li>
+                    <li><strong>网址：</strong>http:/www.dailyblog.applinzi.com</li></ul>
+              <h2>2015.06—2015.12                 Flask个人博客开发</h2>
+             <ul>
+                     <li><strong>职责:</strong>完成系统架构设计，前后端的开发。</li>
+                    <li><strong>实现功能：</strong>用户注册，登录，退出、文章编辑，修改，删除、在线笔记本、工作信息爬虫、定时发送微博等。   </li>
+                    <li><strong>使用技术：</strong>Flask+Bootstrap+Highcharts+Jquery+多进程等。</li>
+                    <li><strong>网址：</strong>http:/www.hbnnlove.applinzi.com</li>
+             </ul>
+                <h2>2014.10—2014.11                 招聘信息爬虫</h2>
+             <ul>
+                     <li><strong>职责:</strong>编写爬虫代码，爬去多个网站的招聘信息</li>
+                    <li><strong>实现功能：</strong>多进程爬取多个网站的招聘信息。 </li>
+                    <li><strong>使用技术：</strong>BeautifulSoup+多进程等。</li>
+             </ul>
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>爱好和特长</dt>
+            <dd><h2>爱好</h2>
+
+            <p>挚爱篮球，从初中开始到现在，10多年了，从来没间断过。也喜欢踢足球。
+                喜欢白落梅、席慕蓉和三毛的作品。喜欢海，就如我的名字一样，我的一生都与海有缘，也希望有朝一日可以生活
+            在海边。</p>
+
+            <h2>特长</h2>
+             <p>擅长短跑，爆发力较强，获得多次校运动会100米，200米短跑冠军</p></dd>
+
+            <dd class="clear"></dd>
+
+            <dt>微信公众号</dt>
+            <dd><img src="http://hbnnlove-hbnnlove.stor.sinaapp.com/qrcode_for_gh_da11b2301e9e_430.jpg" width="200" height="200"/> </dd>
+
+            <dd class="clear"></dd>
+        </dl>
+
+        <div class="clear"></div>
+
+    </div>
+</div>
+
+        </div>
+
+
+    <footer id="myfoot">
+        <hr class="featurette-divider">
+      <div class="container-fluid">
+
+         <div class="row">
+             <div class="col-md-4">
+             <p>版权所有 © 2016 dailyblog.applinzi.com All right Reserved </p>
+            </div>
+             <div class="col-md-5">
+             <p>基于Django搭建</p>
+             <p>静态存储利用SAE的storage及七牛云存储</p>
+             <p>本页面加载时间:<!!LOAD_TIMES!!>s</p>
+             </div>
+             <div class="col-md-3">
+             <ul style="text-align:left ">
+             <li><a href="http://weibo.com/2721409931/profile?topnav=1&wvr=6&is_all=1#_rnd1458175873657">微博</a></li>
+             <li><a href="https://www.github.com/haipersist">Github</a></li>
+             </div>
+         </div>
+     </div>
+    </footer>
+
+    </div>
+
+</body>
+
+ <script type="text/javascript">
+var duoshuoQuery = {short_name:"dailyblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<script type="text/javascript" src="/static/js/vmaig.js"></script>
+{% block js%}{% endblock%}
+
+</html>
