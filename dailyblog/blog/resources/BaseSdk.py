@@ -19,7 +19,7 @@ class BaiduSDK():
 
     def __init__(self,url):
         self.base_url = 'http://apis.baidu.com'
-        self.apikey = "603fcd2d6312152d404e9d7f893f663e"
+        self.apikey = "603fcdf63wdwdwdf9fef63e"
         self.url = '/'.join([self.base_url,url])
 
     def get_content(self):
