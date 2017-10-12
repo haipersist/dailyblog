@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{%block title%}
+<title>用户登录</title>
+{% endblock %}
+
+
+{% block main %}
+
+{% url 'register-view' as register_url %}
+{{ confirm }}
+<div class="row">
+  <div id="article-content" class="col-md-4 "></div>
+   <div id="article-content" class="col-md-5 ">
+    <div id="blog-login">
+  <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">请登录：</h3>
+        </div>
+        <br>
+    <form id="login-form" class="form-horizontal clearfix" method="post" action="">
+         {% csrf_token %}
+            {% if errors %}
+               {% for error in errors %}
+
+                    {% if error %}
+                   <p style="color: rgba(252, 37, 12, 0.93)">{{error}}</p>
+                    {% endif %}
+
+                {% endfor %}
+            {% endif %}
+
+            <div class="form-group">
+                {{ form.username.help_text }}
+                {{form.username.errors}}
+                <label for="vmaig-auth-register-username" class="col-sm-3 control-label">用户名：</label>
+                <label>{{ confirm }}</label>
+                <div class="col-sm-7">
+                   {{form.username}}
+                </div>
+            </div>
+            <div class="form-group">
+                {{form.password.errors}}
+                <label class="col-sm-3 control-label">密码：</label>
+                <div class="col-sm-7">
+                    {{form.password}}
+                </div>
+            </div>
+
+            <br/>
+            <button id="login-button" type="submit" class="btn btn-success">登录</button>
+            <a href="{{register_url}}" type="button" class="btn btn-link">注册</a>
+            <a href="/account/forgetpasswd/" type="button" class="btn btn-link" style="color: #ea341b">忘记密码?</a>
+        </form>
+  </div>
+</div>
+   </div>
+</div>
+ {% endblock %}

@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,11 +17,25 @@
         <link rel="stylesheet" media="screen"
               href="/static/dashboard/css/bootstrap-admin-theme-change-size.css">
 
-
+        <link rel="stylesheet" type="text/css" href="/static/css/jquery.dataTables.css">
         <link rel="shortcut icon" href="/static/img/hbnn.ico"/>
         <link rel="bookmark" href="/static/img/hbnn.ico"/>
         <!-- Vendors -->
-
+        <script src="/static/jquery/jquery-2.1.3.min.js"></script>
+        <script src="/static/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        function gotopage() {
+            var page = $("#gotopage input").val();
+            if(page>{{paginator.num_pages}})
+            {
+                alert('输入错误！请输入小于总页数的数字！');
+            }
+            else {
+                window.location.href = '?page=' + page;  //重定向
+            }
+            return false;
+        }
+    </script>
         {% block js %}{% endblock %}
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -29,14 +44,9 @@
         <![endif]-->
     </head>
 <body class="bootstrap-admin-with-small-navbar">
-  <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
-<script src="http://cdn.hcharts.cn/highcharts/modules/data.js"></script>
-<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+
 
 <!-- Additional files for the Highslide popup effect -->
-<script src="https://www.highcharts.com/samples/static/highslide-full.min.js"></script>
-<script src="https://www.highcharts.com/samples/static/highslide.config.js" charset="utf-8"></script>
-<link rel="stylesheet" type="text/css" href="https://www.highcharts.com/samples/static/highslide.css" />
         <!-- small navbar -->
         <nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar-sm" role="navigation">
             <div class="container">
@@ -76,7 +86,9 @@
                         </div>
                         <div class="collapse navbar-collapse main-navbar-collapse">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#">Link</a></li>
+                                <li><a href="/">首页</a></li>
+                                <li class="active"><a href="/dashboard/">后台管理</a></li>
+                                <li><a href="/job/">工作信息</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div>
@@ -87,31 +99,35 @@
         <div class="container">
             <!-- left, vertical navbar & content -->
             <div class="row">
+                <script type="text/javascript" src="/static/js/control_nav.js"></script>
                 <!-- left, vertical navbar -->
                 <div class="col-md-3 bootstrap-admin-col-left">
                     <ul class="nav navbar-collapse collapse bootstrap-admin-navbar-side navbar-dashboard">
                         <li>
                             <a href="/article/blogintroduce.html"><i class="glyphicon glyphicon-chevron-right"></i> 网站介绍</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="/dashboard/"><i class="glyphicon glyphicon-chevron-right"></i> Dashboard</a>
                         </li>
-                        <li>
-                            <a href="#"><i class="glyphicon glyphicon-chevron-down"></i> 个人信息</a>
+                        <li class="usercontrol">
+                            <a href="#"><i class="glyphicon glyphicon-chevron-down"></i> 用户管理</a>
                             <ul class="nav navbar-collapse bootstrap-admin-navbar-side">
-                                <li><a href="/dashboard/profile/"><i class="glyphicon glyphicon-chevron-right"></i> 修改密码</a></li>
-                                <li><a href="/dashboard/profileinfo/"><i class="glyphicon glyphicon-chevron-right"></i>修改个人资料 </a></li>
+                                <li><a href="/account/changepassword/"><i class="glyphicon glyphicon-chevron-right"></i> 修改密码</a></li>
+                                <li><a href="/account/userprofile/"><i class="glyphicon glyphicon-chevron-right"></i>修改个人资料 </a></li>
                             </ul>
                         </li>
-                         <li>
-                            <a href="#"><i class="glyphicon glyphicon-chevron-down"></i> 文章信息</a>
+                         <li class="usercontrol">
+                            <a href="#"><i class="glyphicon glyphicon-chevron-down"></i> 文章</a>
                             <ul class="nav navbar-collapse bootstrap-admin-navbar-side">
                                 <li><a href="/dashboard/article/add/"><i class="glyphicon glyphicon-chevron-right"></i> 添加文章</a></li>
                                 <li><a href="/dashboard/articles/"><i class="glyphicon glyphicon-chevron-right"></i>文章管理</a></li>
-                            </ul>
+                                {# <li><a href="/dashboard/wechat/"><i class="glyphicon glyphicon-chevron-right"></i>微信收藏文章</a></li>#}                            </ul>
+                        </li>
+                         <li>
+                            <a href="/job/"><i class="glyphicon glyphicon-chevron-right"></i>招聘信息</a>
                         </li>
                         <li>
-                            <a href="/dashboard/send_mail/"><i class="glyphicon glyphicon-chevron-right"></i>发邮件给博主</a>
+                            <a href="/advise/"><i class="glyphicon glyphicon-chevron-right"></i>发邮件给博主</a>
                         </li>
                     </ul>
                 </div>
@@ -129,13 +145,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                            <p class="left">Haibo Website</p>
+                            <p>版权所有 © 2016-2017 hbnnforever.cn All right Reserved. </p>
+             <p><a href="http://www.miitbeian.gov.cn/">京ICP备17048457号</a></p>
                     </div>
                     <div class="col-md-4">
-                            <p class="right">&copy; 2016</p>
+                             <p>基于Nginx + supervisor + gunicorn + Django搭建</p>
+             <p>静态存储为tencent云存储</p>
                     </div>
                      <div class="col-md-4">
-                            <p class="right">首页</p>
+                            <ul class="footerli" style="text-align:left ">
+              <li><a href="http://dailyblog.applinzi.com/author/">作者介绍</a></li>
+             <li><a href="http://weibo.com/2721409931/profile?topnav=1&wvr=6&is_all=1#_rnd1458175873657">微博</a></li>
+             <li><a href="https://www.github.com/haipersist">Github</a></li>
+             <li><a href="http://hbnnlove.sinaapp.com">我的Flask博客</a></li>
                     </div>
                 </div>
             </div>

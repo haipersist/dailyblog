@@ -29,6 +29,7 @@
                 {% endfor %}
             {% endif %}
             <div class="form-group">
+                {{ form.username.help_text }}
                 {{form.username.errors}}
                 <label for="vmaig-auth-register-username" class="col-sm-3 control-label">用户名：</label>
                 <label>{{ confirm }}</label>

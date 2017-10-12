@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{%block title%}
+<title>用户密码重置</title>
+{% endblock %}
+
+
+{% block main %}
+
+{% url 'register-view' as register_url %}
+{{ confirm }}
+<div class="row">
+  <div id="article-content" class="col-md-4 "></div>
+   <div id="article-content" class="col-md-5 ">
+    <div id="blog-login">
+  <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{resettitle}}</h3>
+        </div>
+        <br>
+
+    <form id="login-form" class="form-horizontal clearfix" method="post" action="">
+         {% csrf_token %}
+            {% if errors %}
+               {% for error in errors %}
+
+                    {% if error %}
+                   <p style="color: rgba(252, 37, 12, 0.93)">{{error}}</p>
+                    {% endif %}
+
+                {% endfor %}
+            {% endif %}
+
+            <div class="form-group">
+                {{ form.new_password1.errors }}
+                <label for="vmaig-auth-register-username" class="col-sm-3 control-label">新密码：</label>
+                <div class="col-sm-7">
+                   {{ form.new_password1 }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form.new_password2.errors }}
+                <label class="col-sm-3 control-label">确认密码：</label>
+                <div class="col-sm-7">
+                   {{ form.new_password2 }}
+                </div>
+            </div>
+
+            <br/>
+            <button id="login-button" type="submit" class="btn btn-success">确认</button>
+
+
+        </form>
+
+
+  </div>
+</div>
+   </div>
+</div>
+ {% endblock %}

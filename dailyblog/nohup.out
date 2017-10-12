@@ -1,0 +1,453 @@
+[2017-09-02 22:48:35,690: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2017-09-02 22:48:35,700: INFO/MainProcess] mingle: searching for neighbors
+[2017-09-02 22:48:36,707: INFO/MainProcess] mingle: all alone
+[2017-09-02 22:48:36,715: WARNING/MainProcess] celery@haibo-aliyun ready.
+[2017-09-02 22:48:43,589: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[ce92f300-8ad4-484a-98d6-ac4df2765bff]
+[2017-09-02 22:48:43,594: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:48:43,601: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:48:43,605: INFO/MainProcess] Task blog.tasks.incr_readtimes[ce92f300-8ad4-484a-98d6-ac4df2765bff] succeeded in 0.0149719966576s: 1L
+[2017-09-02 22:48:48,720: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[595060ad-d2ee-4d1b-8039-e1ec47f28305]
+[2017-09-02 22:48:48,722: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:48:48,723: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:48:48,727: INFO/MainProcess] Task blog.tasks.incr_readtimes[595060ad-d2ee-4d1b-8039-e1ec47f28305] succeeded in 0.00547848641872s: 1L
+[2017-09-02 22:48:51,921: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[ce9a24a5-ca81-4d21-a812-0e0882184369]
+[2017-09-02 22:48:51,922: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:48:51,923: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:48:51,925: INFO/MainProcess] Task blog.tasks.incr_readtimes[ce9a24a5-ca81-4d21-a812-0e0882184369] succeeded in 0.00433501880616s: 1L
+[2017-09-02 22:48:55,213: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[001aa92d-c73b-45b7-b876-7d3664a46358]
+[2017-09-02 22:48:55,214: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:48:55,215: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:48:55,218: INFO/MainProcess] Task blog.tasks.incr_readtimes[001aa92d-c73b-45b7-b876-7d3664a46358] succeeded in 0.00494313519448s: 1L
+[2017-09-02 22:48:56,305: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[c673dee5-d20a-4d0f-9c0d-89aefb90afd0]
+[2017-09-02 22:48:56,306: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:48:56,307: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:48:56,310: INFO/MainProcess] Task blog.tasks.incr_readtimes[c673dee5-d20a-4d0f-9c0d-89aefb90afd0] succeeded in 0.00523780472577s: 1L
+[2017-09-02 22:48:57,409: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[95b9bada-b4f2-4265-8c74-23813ca2675c]
+[2017-09-02 22:48:57,410: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:48:57,411: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:48:57,414: INFO/MainProcess] Task blog.tasks.incr_readtimes[95b9bada-b4f2-4265-8c74-23813ca2675c] succeeded in 0.00520306546241s: 1L
+[2017-09-02 22:49:00,057: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[43bc89ea-d62a-41e0-b954-e4ccf433f863]
+[2017-09-02 22:49:00,058: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:49:00,059: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:49:00,061: INFO/MainProcess] Task blog.tasks.incr_readtimes[43bc89ea-d62a-41e0-b954-e4ccf433f863] succeeded in 0.0041624000296s: 1L
+[2017-09-02 22:49:01,037: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[80c1e6d4-ea61-45b3-83bb-d93aab71943f]
+[2017-09-02 22:49:01,038: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:49:01,039: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:49:01,042: INFO/MainProcess] Task blog.tasks.incr_readtimes[80c1e6d4-ea61-45b3-83bb-d93aab71943f] succeeded in 0.00451565347612s: 1L
+[2017-09-02 22:50:11,854: INFO/MainProcess] Received task: blog.tasks.add_trip[f9fade2a-1fcb-419e-9576-faf56825fb80]
+[2017-09-02 22:50:11,856: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:50:11,857: DEBUG/Worker-1] (0.000) INSERT INTO `blog_trip` (`title`, `img`, `abstract`, `article_url`, `figure_type`, `trip_date`) VALUES ('青岛游记', '/media/ckeditor/uploads/2017/09/02/img_1722.jpg', '青岛', '/article/qingdaoyouji.html', 'effect-milo', '2017-09-06'); args=[u'\u9752\u5c9b\u6e38\u8bb0', u'/media/ckeditor/uploads/2017/09/02/img_1722.jpg', u'\u9752\u5c9b', u'/article/qingdaoyouji.html', 'effect-milo', u'2017-09-06']
+[2017-09-02 22:50:11,859: INFO/MainProcess] Task blog.tasks.add_trip[f9fade2a-1fcb-419e-9576-faf56825fb80] succeeded in 0.00425772089511s: 'success'
+[2017-09-02 22:50:23,117: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[462adbfb-9103-4575-b0aa-b018fd4d88c4]
+[2017-09-02 22:50:23,118: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:50:23,119: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 976; args=(1, 976)
+[2017-09-02 22:50:23,122: INFO/MainProcess] Task blog.tasks.incr_readtimes[462adbfb-9103-4575-b0aa-b018fd4d88c4] succeeded in 0.00436159130186s: 1L
+[2017-09-02 22:50:33,741: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[0055bd28-e684-41f3-b8fd-6ff35ec92f08]
+[2017-09-02 22:50:33,742: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:50:33,743: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 976; args=(1, 976)
+[2017-09-02 22:50:33,745: INFO/MainProcess] Task blog.tasks.incr_readtimes[0055bd28-e684-41f3-b8fd-6ff35ec92f08] succeeded in 0.00432620383799s: 1L
+[2017-09-02 22:52:17,457: INFO/MainProcess] Received task: blog.tasks.add_trip[e91533ac-269f-45eb-9513-6ffeba84e50c]
+[2017-09-02 22:52:17,459: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:52:17,461: DEBUG/Worker-1] (0.002) INSERT INTO `blog_trip` (`title`, `img`, `abstract`, `article_url`, `figure_type`, `trip_date`) VALUES ('青岛游记（测试）', '/media/ckeditor/uploads/2017/09/02/img_1715.JPG', '青岛游记（测试）', '/article/qingdsw.html', 'effect-milo', '2017-09-05'); args=[u'\u9752\u5c9b\u6e38\u8bb0\uff08\u6d4b\u8bd5\uff09', u'/media/ckeditor/uploads/2017/09/02/img_1715.JPG', u'\u9752\u5c9b\u6e38\u8bb0\uff08\u6d4b\u8bd5\uff09', u'/article/qingdsw.html', 'effect-milo', u'2017-09-05']
+[2017-09-02 22:52:17,464: INFO/MainProcess] Task blog.tasks.add_trip[e91533ac-269f-45eb-9513-6ffeba84e50c] succeeded in 0.00604998506606s: 'success'
+[2017-09-02 22:52:26,393: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[d62a1796-c444-4092-a8c1-c13bd1b58b9e]
+[2017-09-02 22:52:26,394: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:52:26,395: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 977; args=(1, 977)
+[2017-09-02 22:52:26,397: INFO/MainProcess] Task blog.tasks.incr_readtimes[d62a1796-c444-4092-a8c1-c13bd1b58b9e] succeeded in 0.00428746175021s: 1L
+[2017-09-02 22:52:36,325: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[f31344ba-eb14-4d01-9826-ab75c2d20807]
+[2017-09-02 22:52:36,326: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:52:36,327: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 977; args=(1, 977)
+[2017-09-02 22:52:36,329: INFO/MainProcess] Task blog.tasks.incr_readtimes[f31344ba-eb14-4d01-9826-ab75c2d20807] succeeded in 0.00424346234649s: 1L
+
+Restarting celery worker (/srv/dailyblog/env/bin/celery -A dailyblog worker --loglevel=INFO)
+ 
+ -------------- celery@haibo-aliyun v3.1.25 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-4.4.0-63-generic-x86_64-with-Ubuntu-16.04-xenial
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dailyblog:0x7f2eacd2c550
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . blog.tasks.add_trip
+  . blog.tasks.incr_readtimes
+
+[2017-09-02 22:55:28,676: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2017-09-02 22:55:28,685: INFO/MainProcess] mingle: searching for neighbors
+[2017-09-02 22:55:29,692: INFO/MainProcess] mingle: all alone
+[2017-09-02 22:55:29,699: WARNING/MainProcess] celery@haibo-aliyun ready.
+[2017-09-02 22:55:29,700: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[6d02a6de-3937-4605-8b49-1da6f140ed54]
+[2017-09-02 22:55:29,704: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:55:29,707: DEBUG/Worker-1] (0.001) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:55:29,708: INFO/MainProcess] Task blog.tasks.incr_readtimes[6d02a6de-3937-4605-8b49-1da6f140ed54] succeeded in 0.00644095987082s: 0L
+[2017-09-02 22:55:30,686: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[cdd2a416-5997-44a7-883d-68b3e22d0d1d]
+[2017-09-02 22:55:30,687: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[c0b6b7e4-ed89-4f9d-b15e-6ad0a9d1abc8]
+[2017-09-02 22:55:30,687: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[271e39f6-d5fc-41ca-a99e-202464e7c82a]
+[2017-09-02 22:55:30,689: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:55:30,690: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:55:30,691: INFO/MainProcess] Task blog.tasks.incr_readtimes[cdd2a416-5997-44a7-883d-68b3e22d0d1d] succeeded in 0.00292125437409s: 0L
+[2017-09-02 22:55:30,692: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:55:30,692: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:55:30,693: INFO/MainProcess] Task blog.tasks.incr_readtimes[c0b6b7e4-ed89-4f9d-b15e-6ad0a9d1abc8] succeeded in 0.00202796235681s: 0L
+[2017-09-02 22:55:30,694: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-02 22:55:30,695: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 975; args=(1, 975)
+[2017-09-02 22:55:30,695: INFO/MainProcess] Task blog.tasks.incr_readtimes[271e39f6-d5fc-41ca-a99e-202464e7c82a] succeeded in 0.00197215378284s: 0L
+[2017-09-03 05:34:08,085: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[e4939b9b-97be-406e-8dee-0bcc4877d03e]
+[2017-09-03 05:34:08,087: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 05:34:08,087: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 708; args=(1, 708)
+[2017-09-03 05:34:08,090: INFO/MainProcess] Task blog.tasks.incr_readtimes[e4939b9b-97be-406e-8dee-0bcc4877d03e] succeeded in 0.00454804953188s: 1L
+[2017-09-03 05:35:48,348: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[cc5db27c-2cf4-434c-b4ca-8f6202cbbdb4]
+[2017-09-03 05:35:48,349: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 05:35:48,350: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 481; args=(1, 481)
+[2017-09-03 05:35:48,353: INFO/MainProcess] Task blog.tasks.incr_readtimes[cc5db27c-2cf4-434c-b4ca-8f6202cbbdb4] succeeded in 0.00449251756072s: 1L
+[2017-09-03 06:51:34,766: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[c7d23823-e262-45a2-a129-abf6a638850f]
+[2017-09-03 06:51:34,768: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 06:51:34,769: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 482; args=(1, 482)
+[2017-09-03 06:51:34,771: INFO/MainProcess] Task blog.tasks.incr_readtimes[c7d23823-e262-45a2-a129-abf6a638850f] succeeded in 0.00429341197014s: 1L
+[2017-09-03 06:52:36,012: INFO/MainProcess] Received task: blog.tasks.add_trip[1098b34c-b7c8-48a3-837d-13d8c2b719ec]
+[2017-09-03 06:52:36,014: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 06:52:36,015: DEBUG/Worker-1] (0.000) INSERT INTO `blog_trip` (`title`, `img`, `abstract`, `article_url`, `figure_type`, `trip_date`) VALUES ('青岛游记', '{\'fail\': u\'ERROR_CMD_COS_FILE_EXIST\'}', '青岛', '/article/qingdaoyouji.html', 'effect-lily', '2017-09-04'); args=[u'\u9752\u5c9b\u6e38\u8bb0', u"{'fail': u'ERROR_CMD_COS_FILE_EXIST'}", u'\u9752\u5c9b', u'/article/qingdaoyouji.html', 'effect-lily', u'2017-09-04']
+[2017-09-03 06:52:36,018: INFO/MainProcess] Task blog.tasks.add_trip[1098b34c-b7c8-48a3-837d-13d8c2b719ec] succeeded in 0.00497191306204s: 'success'
+[2017-09-03 06:52:40,033: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[f39ab508-2c0e-4a58-941c-7e3f38fd830b]
+[2017-09-03 06:52:40,034: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 06:52:40,035: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 978; args=(1, 978)
+[2017-09-03 06:52:40,038: INFO/MainProcess] Task blog.tasks.incr_readtimes[f39ab508-2c0e-4a58-941c-7e3f38fd830b] succeeded in 0.00447631813586s: 1L
+[2017-09-03 06:52:48,457: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[3a7498b7-31d0-4dc7-82b1-ee25a8dfe67d]
+[2017-09-03 06:52:48,458: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 06:52:48,459: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 978; args=(1, 978)
+[2017-09-03 06:52:48,462: INFO/MainProcess] Task blog.tasks.incr_readtimes[3a7498b7-31d0-4dc7-82b1-ee25a8dfe67d] succeeded in 0.00464531499892s: 1L
+[2017-09-03 06:56:19,403: INFO/MainProcess] Received task: blog.tasks.add_trip[caa7712b-5ba7-4e6f-8841-948cc4ed6f91]
+[2017-09-03 06:56:19,405: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 06:56:19,406: DEBUG/Worker-1] (0.000) INSERT INTO `blog_trip` (`title`, `img`, `abstract`, `article_url`, `figure_type`, `trip_date`) VALUES ('青岛游记', 'http://blog-1251509264.costj.myqcloud.com/img_2201.jpg', '青岛游记', '/article/qingdaoyouji.html', 'effect-lily', '2017-08-29'); args=[u'\u9752\u5c9b\u6e38\u8bb0', u'http://blog-1251509264.costj.myqcloud.com/img_2201.jpg', u'\u9752\u5c9b\u6e38\u8bb0', u'/article/qingdaoyouji.html', 'effect-lily', u'2017-08-29']
+[2017-09-03 06:56:19,407: INFO/MainProcess] Task blog.tasks.add_trip[caa7712b-5ba7-4e6f-8841-948cc4ed6f91] succeeded in 0.00357192661613s: 'success'
+[2017-09-03 06:56:23,401: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[0ae57427-32c3-4e20-b29a-4d76b5a74a4f]
+[2017-09-03 06:56:23,402: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 06:56:23,403: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 979; args=(1, 979)
+[2017-09-03 06:56:23,405: INFO/MainProcess] Task blog.tasks.incr_readtimes[0ae57427-32c3-4e20-b29a-4d76b5a74a4f] succeeded in 0.00419913232327s: 1L
+[2017-09-03 07:03:03,802: INFO/MainProcess] Received task: blog.tasks.add_trip[8ff3eafa-95ff-4f40-b7d1-3425dfba683a]
+[2017-09-03 07:03:03,807: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 07:03:03,817: DEBUG/Worker-1] (0.008) INSERT INTO `blog_trip` (`title`, `img`, `abstract`, `article_url`, `figure_type`, `trip_date`) VALUES ('ff', '{\'fail\': u\'ERROR_CMD_COS_FILE_EXIST\'}', 'ddw', '/article/fw.html', 'effect-lily', '2017-09-11'); args=[u'ff', u"{'fail': u'ERROR_CMD_COS_FILE_EXIST'}", u'ddw', u'/article/fw.html', 'effect-lily', u'2017-09-11']
+[2017-09-03 07:03:03,820: INFO/MainProcess] Task blog.tasks.add_trip[8ff3eafa-95ff-4f40-b7d1-3425dfba683a] succeeded in 0.0159798916429s: 'success'
+[2017-09-03 07:03:18,817: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[8a7d1e7d-6fc4-410e-a0aa-70bb09edda79]
+[2017-09-03 07:03:18,818: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 07:03:18,819: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 980; args=(1, 980)
+[2017-09-03 07:03:18,822: INFO/MainProcess] Task blog.tasks.incr_readtimes[8a7d1e7d-6fc4-410e-a0aa-70bb09edda79] succeeded in 0.00456296931952s: 1L
+[2017-09-03 07:06:28,840: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[6f76c7a0-4678-4a44-8a04-b66e2dd0911c]
+[2017-09-03 07:06:28,842: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 07:06:28,842: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 979; args=(1, 979)
+[2017-09-03 07:06:28,845: INFO/MainProcess] Task blog.tasks.incr_readtimes[6f76c7a0-4678-4a44-8a04-b66e2dd0911c] succeeded in 0.0045304717496s: 1L
+[2017-09-03 07:25:51,143: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[be00e044-c800-4e2e-acfb-673362796db7]
+[2017-09-03 07:25:51,145: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 07:25:51,146: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 981; args=(1, 981)
+[2017-09-03 07:25:51,149: INFO/MainProcess] Task blog.tasks.incr_readtimes[be00e044-c800-4e2e-acfb-673362796db7] succeeded in 0.00494995340705s: 1L
+[2017-09-03 07:43:06,274: INFO/MainProcess] Received task: blog.tasks.add_trip[ac68ab52-6536-495d-8173-19a39e6c1d69]
+[2017-09-03 07:43:06,275: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 07:43:06,276: DEBUG/Worker-1] (0.000) INSERT INTO `blog_trip` (`title`, `img`, `abstract`, `article_url`, `figure_type`, `trip_date`) VALUES ('青岛游记', 'http://blog-1251509264.costj.myqcloud.com/qd4.JPG', '青岛去拍婚纱照，圆了我的梦。', '/article/qingdaowan.html', 'effect-lily', '2015-10-01'); args=[u'\u9752\u5c9b\u6e38\u8bb0', u'http://blog-1251509264.costj.myqcloud.com/qd4.JPG', u'\u9752\u5c9b\u53bb\u62cd\u5a5a\u7eb1\u7167\uff0c\u5706\u4e86\u6211\u7684\u68a6\u3002', u'/article/qingdaowan.html', 'effect-lily', u'2015-10-01']
+[2017-09-03 07:43:06,278: INFO/MainProcess] Task blog.tasks.add_trip[ac68ab52-6536-495d-8173-19a39e6c1d69] succeeded in 0.00369697716087s: 'success'
+[2017-09-03 07:43:15,349: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[6131dd08-f2ec-4886-81d5-0656239b542d]
+[2017-09-03 07:43:15,350: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 07:43:15,351: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 07:43:15,354: INFO/MainProcess] Task blog.tasks.incr_readtimes[6131dd08-f2ec-4886-81d5-0656239b542d] succeeded in 0.00456185825169s: 1L
+[2017-09-03 07:57:01,887: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[aa09d150-bfe3-4be4-91a7-39eb7205dff2]
+[2017-09-03 07:57:01,888: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 07:57:01,889: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 07:57:01,892: INFO/MainProcess] Task blog.tasks.incr_readtimes[aa09d150-bfe3-4be4-91a7-39eb7205dff2] succeeded in 0.0047578541562s: 1L
+[2017-09-03 08:02:17,188: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[9a41bf37-22fd-48ea-81d8-26a9dfeff35a]
+[2017-09-03 08:02:17,190: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 08:02:17,191: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 08:02:17,193: INFO/MainProcess] Task blog.tasks.incr_readtimes[9a41bf37-22fd-48ea-81d8-26a9dfeff35a] succeeded in 0.00425081606954s: 1L
+[2017-09-03 08:02:47,705: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[3e1a6bdd-7993-492c-b098-7ac5cb987e56]
+[2017-09-03 08:02:47,706: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 08:02:47,707: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 08:02:47,710: INFO/MainProcess] Task blog.tasks.incr_readtimes[3e1a6bdd-7993-492c-b098-7ac5cb987e56] succeeded in 0.00457559898496s: 1L
+[2017-09-03 08:02:50,969: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[3aba2528-a811-4264-a240-115c01c0b4cb]
+[2017-09-03 08:02:50,970: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 08:02:50,971: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 08:02:50,973: INFO/MainProcess] Task blog.tasks.incr_readtimes[3aba2528-a811-4264-a240-115c01c0b4cb] succeeded in 0.00398431159556s: 1L
+[2017-09-03 08:03:24,429: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[1a2648e6-bbfa-4587-be53-acd20ce980be]
+[2017-09-03 08:03:24,430: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 08:03:24,431: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 08:03:24,433: INFO/MainProcess] Task blog.tasks.incr_readtimes[1a2648e6-bbfa-4587-be53-acd20ce980be] succeeded in 0.00420003850013s: 1L
+[2017-09-03 08:04:18,817: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[aa2787ed-dfcc-4b1d-9a1b-d54f9c293ae4]
+[2017-09-03 08:04:18,819: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 08:04:18,819: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 08:04:18,822: INFO/MainProcess] Task blog.tasks.incr_readtimes[aa2787ed-dfcc-4b1d-9a1b-d54f9c293ae4] succeeded in 0.00491100084037s: 1L
+[2017-09-03 08:04:26,633: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[65b4353f-e03c-4a31-a5af-81735fc2a450]
+[2017-09-03 08:04:26,634: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 08:04:26,635: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 08:04:26,638: INFO/MainProcess] Task blog.tasks.incr_readtimes[65b4353f-e03c-4a31-a5af-81735fc2a450] succeeded in 0.00451230444014s: 1L
+[2017-09-03 08:04:29,908: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[a413f331-605e-4a5b-be71-589a8f08834a]
+[2017-09-03 08:04:29,910: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 08:04:29,911: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 962; args=(1, 962)
+[2017-09-03 08:04:29,913: INFO/MainProcess] Task blog.tasks.incr_readtimes[a413f331-605e-4a5b-be71-589a8f08834a] succeeded in 0.00432035047561s: 1L
+[2017-09-03 08:04:32,453: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[6e3272eb-8ed6-4a96-b44e-0673c837b71d]
+[2017-09-03 08:04:32,454: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 08:04:32,455: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 08:04:32,457: INFO/MainProcess] Task blog.tasks.incr_readtimes[6e3272eb-8ed6-4a96-b44e-0673c837b71d] succeeded in 0.00420709513128s: 1L
+[2017-09-03 10:38:56,179: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[ea96bc92-7dd6-4970-90cc-6c3ed617a2f6]
+[2017-09-03 10:38:56,180: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 10:38:56,181: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 481; args=(1, 481)
+[2017-09-03 10:38:56,184: INFO/MainProcess] Task blog.tasks.incr_readtimes[ea96bc92-7dd6-4970-90cc-6c3ed617a2f6] succeeded in 0.00461924169213s: 1L
+[2017-09-03 12:31:06,199: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[3aeb0d5f-48d0-4e72-950d-f482715d67a8]
+[2017-09-03 12:31:06,201: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 12:31:06,202: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 178; args=(1, 178)
+[2017-09-03 12:31:06,204: INFO/MainProcess] Task blog.tasks.incr_readtimes[3aeb0d5f-48d0-4e72-950d-f482715d67a8] succeeded in 0.00459665805101s: 1L
+[2017-09-03 14:20:50,461: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[a053ae62-428b-404f-a08b-12c961a2d387]
+[2017-09-03 14:20:50,462: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 14:20:50,463: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 945; args=(1, 945)
+[2017-09-03 14:20:50,466: INFO/MainProcess] Task blog.tasks.incr_readtimes[a053ae62-428b-404f-a08b-12c961a2d387] succeeded in 0.00455257855356s: 1L
+[2017-09-03 14:21:02,332: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[49045963-5a34-49db-8a98-599330d8ef51]
+[2017-09-03 14:21:02,334: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 14:21:02,334: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 2; args=(1, 2)
+[2017-09-03 14:21:02,337: INFO/MainProcess] Task blog.tasks.incr_readtimes[49045963-5a34-49db-8a98-599330d8ef51] succeeded in 0.00436086021364s: 1L
+[2017-09-03 14:26:16,969: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[dfe0b60e-6500-491a-959d-a3ba7807fdba]
+[2017-09-03 14:26:16,970: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 14:26:16,971: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 482; args=(1, 482)
+[2017-09-03 14:26:16,974: INFO/MainProcess] Task blog.tasks.incr_readtimes[dfe0b60e-6500-491a-959d-a3ba7807fdba] succeeded in 0.00516657531261s: 1L
+[2017-09-03 14:53:39,873: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[085c7a07-88ed-46f1-8a10-8c54ef3387a5]
+[2017-09-03 14:53:39,874: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 14:53:39,875: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 14:53:39,878: INFO/MainProcess] Task blog.tasks.incr_readtimes[085c7a07-88ed-46f1-8a10-8c54ef3387a5] succeeded in 0.00458682980388s: 1L
+[2017-09-03 14:58:10,577: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[6767ab88-5a68-4984-88cf-6a74d7e593d0]
+[2017-09-03 14:58:10,578: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 14:58:10,579: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 14:58:10,582: INFO/MainProcess] Task blog.tasks.incr_readtimes[6767ab88-5a68-4984-88cf-6a74d7e593d0] succeeded in 0.00438826810569s: 1L
+[2017-09-03 15:02:40,125: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[4f042501-476a-4c2a-8ba4-d852798f0af6]
+[2017-09-03 15:02:40,126: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 15:02:40,127: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 15:02:40,129: INFO/MainProcess] Task blog.tasks.incr_readtimes[4f042501-476a-4c2a-8ba4-d852798f0af6] succeeded in 0.00418543349952s: 1L
+[2017-09-03 15:04:48,261: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[2cd00a07-8ccc-4d3a-a05e-d6ad73030e0d]
+[2017-09-03 15:04:48,262: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 15:04:48,263: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 983; args=(1, 983)
+[2017-09-03 15:04:48,266: INFO/MainProcess] Task blog.tasks.incr_readtimes[2cd00a07-8ccc-4d3a-a05e-d6ad73030e0d] succeeded in 0.00448643509299s: 1L
+[2017-09-03 15:05:16,571: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[b108c2ac-2824-43fa-bbe3-648d41ed81ec]
+[2017-09-03 15:05:16,573: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 15:05:16,573: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 15:05:16,576: INFO/MainProcess] Task blog.tasks.incr_readtimes[b108c2ac-2824-43fa-bbe3-648d41ed81ec] succeeded in 0.00436729006469s: 1L
+[2017-09-03 15:05:59,101: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[de9107d4-011f-4026-8216-c8971dd59d04]
+[2017-09-03 15:05:59,102: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 15:05:59,103: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 15:05:59,106: INFO/MainProcess] Task blog.tasks.incr_readtimes[de9107d4-011f-4026-8216-c8971dd59d04] succeeded in 0.0044384514913s: 1L
+[2017-09-03 15:06:04,029: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[ce1e5239-1c2b-49ee-8cbe-72011f10a72b]
+[2017-09-03 15:06:04,030: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 15:06:04,031: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 15:06:04,039: INFO/MainProcess] Task blog.tasks.incr_readtimes[ce1e5239-1c2b-49ee-8cbe-72011f10a72b] succeeded in 0.0103385495022s: 1L
+[2017-09-03 15:06:14,244: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[eb1a9ca0-f21d-4ffd-881a-b99d6c5afe10]
+[2017-09-03 15:06:14,246: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 15:06:14,247: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 15:06:14,249: INFO/MainProcess] Task blog.tasks.incr_readtimes[eb1a9ca0-f21d-4ffd-881a-b99d6c5afe10] succeeded in 0.00421976018697s: 1L
+[2017-09-03 15:06:16,473: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[646d4cf4-f98b-411e-8e88-12b90a10111f]
+[2017-09-03 15:06:16,474: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 15:06:16,476: DEBUG/Worker-1] (0.001) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 962; args=(1, 962)
+[2017-09-03 15:06:16,478: INFO/MainProcess] Task blog.tasks.incr_readtimes[646d4cf4-f98b-411e-8e88-12b90a10111f] succeeded in 0.00506417825818s: 1L
+[2017-09-03 15:06:19,424: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[099d68f6-b436-435d-94d8-73717e9f2ec7]
+[2017-09-03 15:06:19,426: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 15:06:19,427: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 15:06:19,429: INFO/MainProcess] Task blog.tasks.incr_readtimes[099d68f6-b436-435d-94d8-73717e9f2ec7] succeeded in 0.00427427887917s: 1L
+[2017-09-03 15:06:22,425: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[c95663df-35dd-4ec4-8700-3bb62287efde]
+[2017-09-03 15:06:22,426: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 15:06:22,427: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 15:06:22,429: INFO/MainProcess] Task blog.tasks.incr_readtimes[c95663df-35dd-4ec4-8700-3bb62287efde] succeeded in 0.00413158908486s: 1L
+[2017-09-03 15:07:15,420: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[7b209922-8720-4268-87b3-a8bbafed872a]
+[2017-09-03 15:07:15,422: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 15:07:15,423: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 15:07:15,425: INFO/MainProcess] Task blog.tasks.incr_readtimes[7b209922-8720-4268-87b3-a8bbafed872a] succeeded in 0.00432430393994s: 1L
+[2017-09-03 16:57:50,785: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[f80561c7-0d83-4dc5-8643-69e517bd7b01]
+[2017-09-03 16:57:50,786: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 16:57:50,787: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 481; args=(1, 481)
+[2017-09-03 16:57:50,789: INFO/MainProcess] Task blog.tasks.incr_readtimes[f80561c7-0d83-4dc5-8643-69e517bd7b01] succeeded in 0.00404961407185s: 1L
+[2017-09-03 17:12:02,361: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[f32d68ae-8f47-40e7-98f3-f25b363dcaff]
+[2017-09-03 17:12:02,362: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:12:02,363: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 193; args=(1, 193)
+[2017-09-03 17:12:02,366: INFO/MainProcess] Task blog.tasks.incr_readtimes[f32d68ae-8f47-40e7-98f3-f25b363dcaff] succeeded in 0.00441933609545s: 1L
+[2017-09-03 17:12:17,609: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[6d00f4b0-2264-4508-beab-c157cc594099]
+[2017-09-03 17:12:17,610: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:12:17,611: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 17:12:17,614: INFO/MainProcess] Task blog.tasks.incr_readtimes[6d00f4b0-2264-4508-beab-c157cc594099] succeeded in 0.0044669220224s: 1L
+[2017-09-03 17:12:23,073: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[086e9bb9-51c0-4e16-968a-80c018200c2e]
+[2017-09-03 17:12:23,074: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:12:23,075: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 191; args=(1, 191)
+[2017-09-03 17:12:23,078: INFO/MainProcess] Task blog.tasks.incr_readtimes[086e9bb9-51c0-4e16-968a-80c018200c2e] succeeded in 0.00486377160996s: 1L
+[2017-09-03 17:12:33,349: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[5d7876fe-742d-464a-8457-af91fe419cdd]
+[2017-09-03 17:12:33,350: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:12:33,351: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 191; args=(1, 191)
+[2017-09-03 17:12:33,353: INFO/MainProcess] Task blog.tasks.incr_readtimes[5d7876fe-742d-464a-8457-af91fe419cdd] succeeded in 0.00428227521479s: 1L
+[2017-09-03 17:12:50,753: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[4d5e008c-d148-4a2c-81f4-8f2669fa4c98]
+[2017-09-03 17:12:50,754: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:12:50,755: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 476; args=(1, 476)
+[2017-09-03 17:12:50,758: INFO/MainProcess] Task blog.tasks.incr_readtimes[4d5e008c-d148-4a2c-81f4-8f2669fa4c98] succeeded in 0.00437157321721s: 1L
+[2017-09-03 17:15:01,926: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[aa3592c1-f4a6-4ae9-8478-1573e867a7d4]
+[2017-09-03 17:15:01,928: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:15:01,929: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 188; args=(1, 188)
+[2017-09-03 17:15:01,931: INFO/MainProcess] Task blog.tasks.incr_readtimes[aa3592c1-f4a6-4ae9-8478-1573e867a7d4] succeeded in 0.00426969397813s: 1L
+[2017-09-03 17:15:11,585: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[b58f55b8-cbed-44b9-90be-2b2b8be06476]
+[2017-09-03 17:15:11,586: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:15:11,587: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 199; args=(1, 199)
+[2017-09-03 17:15:11,590: INFO/MainProcess] Task blog.tasks.incr_readtimes[b58f55b8-cbed-44b9-90be-2b2b8be06476] succeeded in 0.00433286931366s: 1L
+[2017-09-03 17:15:21,208: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[84f2f9e6-617b-4b57-851f-bc011906efa5]
+[2017-09-03 17:15:21,210: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:15:21,211: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 199; args=(1, 199)
+[2017-09-03 17:15:21,213: INFO/MainProcess] Task blog.tasks.incr_readtimes[84f2f9e6-617b-4b57-851f-bc011906efa5] succeeded in 0.00441229064018s: 1L
+[2017-09-03 17:15:21,415: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[4d1b9b9c-3c09-49f2-b36e-566a7989ce19]
+[2017-09-03 17:15:21,416: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:15:21,417: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 944; args=(1, 944)
+[2017-09-03 17:15:21,419: INFO/MainProcess] Task blog.tasks.incr_readtimes[4d1b9b9c-3c09-49f2-b36e-566a7989ce19] succeeded in 0.00404152832925s: 1L
+[2017-09-03 17:15:21,989: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[178909a5-e8d6-4127-af77-aa79563147bc]
+[2017-09-03 17:15:21,991: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:15:21,992: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 188; args=(1, 188)
+[2017-09-03 17:15:21,996: INFO/MainProcess] Task blog.tasks.incr_readtimes[178909a5-e8d6-4127-af77-aa79563147bc] succeeded in 0.00593450944871s: 1L
+[2017-09-03 17:15:41,365: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[f9f304f7-7b47-486e-8b2f-6401ad24fa0e]
+[2017-09-03 17:15:41,367: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:15:41,368: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 944; args=(1, 944)
+[2017-09-03 17:15:41,370: INFO/MainProcess] Task blog.tasks.incr_readtimes[f9f304f7-7b47-486e-8b2f-6401ad24fa0e] succeeded in 0.0043681235984s: 1L
+[2017-09-03 17:16:58,401: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[b0ad2243-2dee-46c9-a4d3-3f392e136c79]
+[2017-09-03 17:16:58,402: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:16:58,403: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 949; args=(1, 949)
+[2017-09-03 17:16:58,406: INFO/MainProcess] Task blog.tasks.incr_readtimes[b0ad2243-2dee-46c9-a4d3-3f392e136c79] succeeded in 0.00438203290105s: 1L
+[2017-09-03 17:17:11,829: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[71244803-0bc4-439e-939e-7fa459a8d2cb]
+[2017-09-03 17:17:11,832: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:17:11,833: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 957; args=(1, 957)
+[2017-09-03 17:17:11,838: INFO/MainProcess] Task blog.tasks.incr_readtimes[71244803-0bc4-439e-939e-7fa459a8d2cb] succeeded in 0.00746244005859s: 1L
+[2017-09-03 17:17:39,729: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[e05ee77b-24f3-4429-8a96-f38717c23ec1]
+[2017-09-03 17:17:39,730: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:17:39,731: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 957; args=(1, 957)
+[2017-09-03 17:17:39,735: INFO/MainProcess] Task blog.tasks.incr_readtimes[e05ee77b-24f3-4429-8a96-f38717c23ec1] succeeded in 0.00552339106798s: 1L
+[2017-09-03 17:18:56,236: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[4c57660a-9e14-4e5c-8c85-2018b4a12e60]
+[2017-09-03 17:18:56,237: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:18:56,238: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 702; args=(1, 702)
+[2017-09-03 17:18:56,241: INFO/MainProcess] Task blog.tasks.incr_readtimes[4c57660a-9e14-4e5c-8c85-2018b4a12e60] succeeded in 0.00439320597798s: 1L
+[2017-09-03 17:19:08,181: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[b6ea7c9d-e9c3-44f8-87ea-f3a1c6f6f7e0]
+[2017-09-03 17:19:08,182: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:19:08,183: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 702; args=(1, 702)
+[2017-09-03 17:19:08,186: INFO/MainProcess] Task blog.tasks.incr_readtimes[b6ea7c9d-e9c3-44f8-87ea-f3a1c6f6f7e0] succeeded in 0.0045762443915s: 1L
+[2017-09-03 17:35:40,161: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[36893689-0d22-4f1b-bb13-aea0b1c3bc28]
+[2017-09-03 17:35:40,162: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:35:40,163: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 962; args=(1, 962)
+[2017-09-03 17:35:40,166: INFO/MainProcess] Task blog.tasks.incr_readtimes[36893689-0d22-4f1b-bb13-aea0b1c3bc28] succeeded in 0.0044177044183s: 1L
+[2017-09-03 17:38:13,281: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[97573b6a-637f-45b0-8da9-6209c2ec3654]
+[2017-09-03 17:38:13,282: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:38:13,283: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 47; args=(1, 47)
+[2017-09-03 17:38:13,285: INFO/MainProcess] Task blog.tasks.incr_readtimes[97573b6a-637f-45b0-8da9-6209c2ec3654] succeeded in 0.00431909132749s: 1L
+[2017-09-03 17:38:20,341: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[43e62c5a-4b83-4273-aa63-83e1981fd3aa]
+[2017-09-03 17:38:20,342: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:38:20,343: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 937; args=(1, 937)
+[2017-09-03 17:38:20,345: INFO/MainProcess] Task blog.tasks.incr_readtimes[43e62c5a-4b83-4273-aa63-83e1981fd3aa] succeeded in 0.00429433584213s: 1L
+[2017-09-03 17:38:37,972: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[012a45ca-27ff-46db-bbfa-d3cf7a0bd7e9]
+[2017-09-03 17:38:37,974: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:38:37,975: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 937; args=(1, 937)
+[2017-09-03 17:38:37,977: INFO/MainProcess] Task blog.tasks.incr_readtimes[012a45ca-27ff-46db-bbfa-d3cf7a0bd7e9] succeeded in 0.00423155073076s: 1L
+[2017-09-03 17:38:42,505: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[f808d269-ba01-41be-afa0-abd3d41ebd2e]
+[2017-09-03 17:38:42,506: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 17:38:42,507: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 47; args=(1, 47)
+[2017-09-03 17:38:42,509: INFO/MainProcess] Task blog.tasks.incr_readtimes[f808d269-ba01-41be-afa0-abd3d41ebd2e] succeeded in 0.00422426685691s: 1L
+[2017-09-03 18:00:56,894: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[52d31c7e-a526-4c37-8fe1-42f07ddd18df]
+[2017-09-03 18:00:56,895: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 18:00:56,896: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 22; args=(1, 22)
+[2017-09-03 18:00:56,899: INFO/MainProcess] Task blog.tasks.incr_readtimes[52d31c7e-a526-4c37-8fe1-42f07ddd18df] succeeded in 0.00444678217173s: 1L
+[2017-09-03 18:01:06,477: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[6679cacf-c68b-4b8b-9b6e-89dd22213cfa]
+[2017-09-03 18:01:06,479: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 18:01:06,479: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 22; args=(1, 22)
+[2017-09-03 18:01:06,483: INFO/MainProcess] Task blog.tasks.incr_readtimes[6679cacf-c68b-4b8b-9b6e-89dd22213cfa] succeeded in 0.00517776608467s: 1L
+[2017-09-03 18:01:08,617: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[80ed5a36-320b-49f7-b0e4-3e688ac96c28]
+[2017-09-03 18:01:08,618: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 18:01:08,619: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 345; args=(1, 345)
+[2017-09-03 18:01:08,622: INFO/MainProcess] Task blog.tasks.incr_readtimes[80ed5a36-320b-49f7-b0e4-3e688ac96c28] succeeded in 0.00447532907128s: 1L
+[2017-09-03 18:01:15,241: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[516471fc-0616-49f3-a2fa-f5004a117844]
+[2017-09-03 18:01:15,243: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 18:01:15,243: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 345; args=(1, 345)
+[2017-09-03 18:01:15,246: INFO/MainProcess] Task blog.tasks.incr_readtimes[516471fc-0616-49f3-a2fa-f5004a117844] succeeded in 0.0048463223502s: 1L
+[2017-09-03 18:01:25,066: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[80a563c8-9ff7-4288-a59f-f3afbe4bed18]
+[2017-09-03 18:01:25,068: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 18:01:25,069: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 944; args=(1, 944)
+[2017-09-03 18:01:25,072: INFO/MainProcess] Task blog.tasks.incr_readtimes[80a563c8-9ff7-4288-a59f-f3afbe4bed18] succeeded in 0.0059390058741s: 1L
+[2017-09-03 18:43:00,059: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[89f6d920-998e-49b5-83ea-71d4663fbef0]
+[2017-09-03 18:43:00,061: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 18:43:00,062: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 18:43:00,065: INFO/MainProcess] Task blog.tasks.incr_readtimes[89f6d920-998e-49b5-83ea-71d4663fbef0] succeeded in 0.00496898684651s: 1L
+[2017-09-03 18:55:26,097: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[d36f553d-988e-4cbb-81e5-e09329afb827]
+[2017-09-03 18:55:26,098: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 18:55:26,099: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 18:55:26,103: INFO/MainProcess] Task blog.tasks.incr_readtimes[d36f553d-988e-4cbb-81e5-e09329afb827] succeeded in 0.00631568487734s: 1L
+[2017-09-03 19:29:24,785: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[f686b9bf-5dd8-4ded-8410-1dea6e0d361f]
+[2017-09-03 19:29:24,786: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 19:29:24,787: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 482; args=(1, 482)
+[2017-09-03 19:29:24,790: INFO/MainProcess] Task blog.tasks.incr_readtimes[f686b9bf-5dd8-4ded-8410-1dea6e0d361f] succeeded in 0.00458579044789s: 1L
+[2017-09-03 19:56:34,651: INFO/MainProcess] Received task: blog.tasks.add_trip[0578bfc9-5e67-4ed2-b049-33aec7868b52]
+[2017-09-03 19:56:34,652: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 19:56:34,655: DEBUG/Worker-1] (0.002) INSERT INTO `blog_trip` (`title`, `img`, `abstract`, `article_url`, `figure_type`, `trip_date`) VALUES ('2014年清明江南游', 'http://blog-1251509264.costj.myqcloud.com/img_0340.JPG', '一场诗意的旅行，一次美满的赴约。', '/article/jiangnanqingming.html', 'effect-lily', '2014-04-04'); args=[u'2014\u5e74\u6e05\u660e\u6c5f\u5357\u6e38', u'http://blog-1251509264.costj.myqcloud.com/img_0340.JPG', u'\u4e00\u573a\u8bd7\u610f\u7684\u65c5\u884c\uff0c\u4e00\u6b21\u7f8e\u6ee1\u7684\u8d74\u7ea6\u3002', u'/article/jiangnanqingming.html', 'effect-lily', u'2014-04-04']
+[2017-09-03 19:56:34,660: INFO/MainProcess] Task blog.tasks.add_trip[0578bfc9-5e67-4ed2-b049-33aec7868b52] succeeded in 0.008798439987s: 'success'
+[2017-09-03 19:56:46,057: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[1ee2b1ac-c8b1-4cfd-9b26-6ffb3759915d]
+[2017-09-03 19:56:46,059: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 19:56:46,060: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 989; args=(1, 989)
+[2017-09-03 19:56:46,063: INFO/MainProcess] Task blog.tasks.incr_readtimes[1ee2b1ac-c8b1-4cfd-9b26-6ffb3759915d] succeeded in 0.00463073793799s: 1L
+[2017-09-03 19:57:19,121: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[a27a307d-93af-4a22-904c-4f56e9f4b10a]
+[2017-09-03 19:57:19,122: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 19:57:19,123: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 989; args=(1, 989)
+[2017-09-03 19:57:19,126: INFO/MainProcess] Task blog.tasks.incr_readtimes[a27a307d-93af-4a22-904c-4f56e9f4b10a] succeeded in 0.00441719405353s: 1L
+[2017-09-03 19:59:12,973: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[bf4c733f-adec-44d2-8c56-d2d1d92db746]
+[2017-09-03 19:59:12,974: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 19:59:12,975: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 19:59:12,978: INFO/MainProcess] Task blog.tasks.incr_readtimes[bf4c733f-adec-44d2-8c56-d2d1d92db746] succeeded in 0.00486101210117s: 1L
+[2017-09-03 20:00:16,669: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[d8853500-7371-4253-9369-8bf9c7aa5dd2]
+[2017-09-03 20:00:16,670: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 20:00:16,671: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 20:00:16,675: INFO/MainProcess] Task blog.tasks.incr_readtimes[d8853500-7371-4253-9369-8bf9c7aa5dd2] succeeded in 0.00580430869013s: 1L
+[2017-09-03 20:04:55,330: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[82183b47-dcc1-4b2b-b287-4537326eee94]
+[2017-09-03 20:04:55,332: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 20:04:55,333: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 989; args=(1, 989)
+[2017-09-03 20:04:55,335: INFO/MainProcess] Task blog.tasks.incr_readtimes[82183b47-dcc1-4b2b-b287-4537326eee94] succeeded in 0.00460488535464s: 1L
+[2017-09-03 20:05:01,329: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[33888090-a9d3-4fae-a6ca-e5b041711da4]
+[2017-09-03 20:05:01,330: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 20:05:01,331: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 982; args=(1, 982)
+[2017-09-03 20:05:01,334: INFO/MainProcess] Task blog.tasks.incr_readtimes[33888090-a9d3-4fae-a6ca-e5b041711da4] succeeded in 0.00432813726366s: 1L
+[2017-09-03 20:05:06,965: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[4872803e-aefe-4179-8076-4a34500a2b12]
+[2017-09-03 20:05:06,967: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 20:05:06,968: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 962; args=(1, 962)
+[2017-09-03 20:05:06,971: INFO/MainProcess] Task blog.tasks.incr_readtimes[4872803e-aefe-4179-8076-4a34500a2b12] succeeded in 0.00502580869943s: 1L
+[2017-09-03 20:05:12,417: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[0791d2a8-2f10-4f28-9729-bb61aa9dd1fb]
+[2017-09-03 20:05:12,418: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 20:05:12,419: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 20:05:12,422: INFO/MainProcess] Task blog.tasks.incr_readtimes[0791d2a8-2f10-4f28-9729-bb61aa9dd1fb] succeeded in 0.00491025205702s: 1L
+[2017-09-03 20:05:21,780: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[9324c2f7-fddb-4b1a-a200-a8bc14328461]
+[2017-09-03 20:05:21,782: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 20:05:21,782: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 967; args=(1, 967)
+[2017-09-03 20:05:21,785: INFO/MainProcess] Task blog.tasks.incr_readtimes[9324c2f7-fddb-4b1a-a200-a8bc14328461] succeeded in 0.00430714897811s: 1L
+[2017-09-03 23:16:45,912: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[426ae493-3351-40bc-a5dc-15fe6a9ba9f8]
+[2017-09-03 23:16:45,914: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 23:16:45,915: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 481; args=(1, 481)
+[2017-09-03 23:16:45,917: INFO/MainProcess] Task blog.tasks.incr_readtimes[426ae493-3351-40bc-a5dc-15fe6a9ba9f8] succeeded in 0.0041424818337s: 1L
+[2017-09-03 23:23:38,509: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[992c0bb1-b348-441c-8915-d31aaf8890dc]
+[2017-09-03 23:23:38,510: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-03 23:23:38,511: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 477; args=(1, 477)
+[2017-09-03 23:23:38,513: INFO/MainProcess] Task blog.tasks.incr_readtimes[992c0bb1-b348-441c-8915-d31aaf8890dc] succeeded in 0.00428831018507s: 1L
+[2017-09-04 00:32:32,787: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[4a24c8ae-fbf7-4ae9-957f-dc5f2e6fb7d6]
+[2017-09-04 00:32:32,789: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-04 00:32:32,789: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 64; args=(1, 64)
+[2017-09-04 00:32:32,824: INFO/MainProcess] Task blog.tasks.incr_readtimes[4a24c8ae-fbf7-4ae9-957f-dc5f2e6fb7d6] succeeded in 0.0364145664498s: 1L
+[2017-09-04 01:48:19,937: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[b5a75342-a3c0-4de6-aafb-ae79fe998136]
+[2017-09-04 01:48:19,938: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-04 01:48:19,939: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 61; args=(1, 61)
+[2017-09-04 01:48:19,942: INFO/MainProcess] Task blog.tasks.incr_readtimes[b5a75342-a3c0-4de6-aafb-ae79fe998136] succeeded in 0.00456622801721s: 1L
+[2017-09-04 03:04:06,799: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[34de01fd-42b4-4b4a-b7c8-2976dc3732f2]
+[2017-09-04 03:04:06,801: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-04 03:04:06,802: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 65; args=(1, 65)
+[2017-09-04 03:04:06,806: INFO/MainProcess] Task blog.tasks.incr_readtimes[34de01fd-42b4-4b4a-b7c8-2976dc3732f2] succeeded in 0.00625881459564s: 1L
+[2017-09-04 04:19:53,585: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[f10bd64a-f09d-4918-a23a-ce11f154149f]
+[2017-09-04 04:19:53,586: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-04 04:19:53,587: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 66; args=(1, 66)
+[2017-09-04 04:19:53,590: INFO/MainProcess] Task blog.tasks.incr_readtimes[f10bd64a-f09d-4918-a23a-ce11f154149f] succeeded in 0.00458031147718s: 1L
+[2017-09-04 05:35:40,949: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[f9a924e0-6166-4b77-821d-e329602af1a3]
+[2017-09-04 05:35:40,950: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-04 05:35:40,951: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 63; args=(1, 63)
+[2017-09-04 05:35:40,954: INFO/MainProcess] Task blog.tasks.incr_readtimes[f9a924e0-6166-4b77-821d-e329602af1a3] succeeded in 0.00499461777508s: 1L
+[2017-09-04 08:07:14,773: INFO/MainProcess] Received task: blog.tasks.incr_readtimes[f2d7b217-2624-4eaa-a883-3bccdccd45db]
+[2017-09-04 08:07:14,774: DEBUG/Worker-1] (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+[2017-09-04 08:07:14,775: DEBUG/Worker-1] (0.000) UPDATE `blog_article` SET `read_times` = (`blog_article`.`read_times` + 1) WHERE `blog_article`.`id` = 62; args=(1, 62)
+[2017-09-04 08:07:14,777: INFO/MainProcess] Task blog.tasks.incr_readtimes[f2d7b217-2624-4eaa-a883-3bccdccd45db] succeeded in 0.00416433345526s: 1L

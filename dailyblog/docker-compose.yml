@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    ports:
+    - "5000:80"
+    volumes:
+    - .:/dailyblog
+    links:
+    - redis
+
+  redis:
+    image: redis
+

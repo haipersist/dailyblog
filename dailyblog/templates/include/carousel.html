@@ -1,45 +1,56 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        {% for carousel_page in carousel_page_list %}
-            {% if forloop.first%}
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            {% else %}
-                <li data-target="#myCarousel" data-slide-to="{{forloop.counter0}}"></li>
-            {% endif%}
-            
-        {% endfor %}
-    </ol>   
-    <!-- 轮播（Carousel）项目 -->
-    <div class="carousel-inner" role="listbox">
-        {% for carousel_page in carousel_page_list %}
-            {% if forloop.first%}
-            <div class="item active">
-                <img class="first-slide" src="http://hbnnlove-hbnnlove.stor.sinaapp.com/ooYBAFavGPyIO69lAAfc98U7mr0AAC3ZwC7XP0AB90P405.jpg"  alt="{{carousel_page.title}}">
-                <div class="carousel-caption">
-                <h4>{{carousel_page.title}}</h4>
-                <p><a class="btn btn-lg btn-primary" href="{% url 'article-detail-view' carousel_page.alias %}" role="button">阅读全文</a></p>
 
-                </div>
-            </div>
-            {% else %}
-            <div class="item">
-                    <img  src="http://pic1.win4000.com/wallpaper/7/57341ed8b3833.jpg" alt="{{carousel_page.title}}">
-                    <div class="carousel-caption">
-                <h4>{{carousel_page.title}}</h4>
-                <p><a class="btn btn-lg btn-primary" href="{% url 'article-detail-view' carousel_page.alias %}" role="button">阅读全文</a></p>
+      <div class="row featurette">
+        <div class="col-md-4 col-md-push-8" id="index-desc">
+          <h2 class="featurette-heading" style="font-family: STkaiti;margin-bottom:25px">旅行 <span class="text-muted"></span></h2>
+          <p class="lead">我喜欢来到陌生城市，体会不同的人文情怀；</p>
+          <p class="lead">我喜欢来海边看日出，享受那稍纵即逝的绚丽；</p>
+          <p class="lead">我喜欢背上行囊踏上旅途，跨进我前所未见的风景；</p>
+        </div>
+        <div class="col-md-8 col-md-pull-4">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    {% for carousel_page in carousel_page_list %}
+                        {% if forloop.first%}
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        {% else %}
+                            <li data-target="#myCarousel" data-slide-to="{{forloop.counter0}}"></li>
+                        {% endif%}
 
+                    {% endfor %}
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner" role="listbox">
+                    {% for carousel_page in carousel_page_list %}
+                        {% if forloop.first%}
+                        <div class="item active" style="height: 500px">
+                          <a href="{{ carousel_page.article_url }}">
+                            <img class="first-slide" src="{{ carousel_page.img }}"    width="100%" alt="{{carousel_page.title}}">
+                            <div class="carousel-caption">
+                            <h4>{{carousel_page.title}}</h4>
+                            </div>
+                          </a>
+                        </div>
+                        {% else %}
+                        <div class="item" style="height: 500px">
+                          <a href="{{ carousel_page.article_url }}">
+                                <img  src="{{ carousel_page.img }}"  width="100%" alt="{{carousel_page.title}}">
+                                <div class="carousel-caption">
+                            <h4>{{carousel_page.title}}</h4>
+
+                            </div>
+                          </a>
+                        </div>
+                        {% endif%}
+                    {% endfor %}
                 </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                </a>
             </div>
-            {% endif%}
-        {% endfor %}
-    </div>
-    <!-- 轮播（Carousel）导航 -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div> 
+        </div>
+      </div>
+
+
+      <hr class="featurette-divider">

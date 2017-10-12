@@ -2,10 +2,9 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
-    <!--手机html -->
+    <!--手机html,viewport表示是否允许缩放Web页面 -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
     <link rel="shortcut icon" href="/static/img/hbnn.ico"/>
-    <link rel="bookmark" href="/static/img/hbnn.ico"/>
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/blogstyle.css">
     <link rel="stylesheet" href="/static/jquery/jquery.Jcrop.min.css">
@@ -15,6 +14,21 @@
     <script src="/static/jquery/jquery.form.js"></script>
     <script src="/static/jquery/jquery.Jcrop.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/comments_ajax.js"></script>
+    <script src="/static/js/article_ajax.js"></script>
+    <script type="text/javascript">
+        function gotopage() {
+            var page = $("#gotopage input").val();
+            if(page>{{paginator.num_pages}})
+            {
+                alert('输入错误！请输入小于总页数的数字！');
+            }
+            else {
+                window.location.href = '?page=' + page;  //重定向
+            }
+            return false;
+        }
+    </script>
 
     {% block title %} {% endblock %}
     {% block css%} {% endblock%}
@@ -22,10 +36,18 @@
 <body id="dailyblog">
     <!-- 导航栏 -->
 
-    {% include "include/nav.html"%}
+     {% include "include/nav.html"%}
 
     <!-- 文章列表 与 侧边的东西 -->
     <div id="dailyblog-main">
+     <div id="dailyblog-header" class="container">
+            {%block blogheader%}
+            {% endblock %}
+
+
+        </div>
+
+
         <div id="dailyblog-content" class="container">
             {%block main%}
             {% endblock %}
@@ -38,17 +60,21 @@
 
          <div class="row">
              <div class="col-md-4">
-             <p>版权所有 © 2016 dailyblog.applinzi.com All right Reserved </p>
+             <p>版权所有 © 2016-2017 hbnnforever.cn All right Reserved. </p>
+             <p><a href="http://www.miitbeian.gov.cn/">京ICP备17048457号</a></p>
             </div>
              <div class="col-md-5">
-             <p>基于Django搭建</p>
-             <p>静态存储利用SAE的storage及七牛云存储</p>
+                      <p>基于Nginx + supervisor + gunicorn + Django搭建</p>
+             <p>静态存储为tencent云存储</p>
+             <p>在线人数：{{ online_ips }}人</p>
              <p>本页面加载时间:<!!LOAD_TIMES!!>s</p>
              </div>
              <div class="col-md-3">
              <ul class="footerli" style="text-align:left ">
+              <li><a href="http://dailyblog.applinzi.com/author/">作者介绍</a></li>
              <li><a href="http://weibo.com/2721409931/profile?topnav=1&wvr=6&is_all=1#_rnd1458175873657">微博</a></li>
              <li><a href="https://www.github.com/haipersist">Github</a></li>
+             <li><a href="http://hbnnlove.sinaapp.com">我的Flask博客</a></li>
              </div>
          </div>
      </div>
@@ -58,17 +84,7 @@
 
 </body>
 
- <script type="text/javascript">
-var duoshuoQuery = {short_name:"dailyblog"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0]
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
+
 <script type="text/javascript" src="/static/js/blog.js"></script>
 {% block js%}{% endblock%}
 

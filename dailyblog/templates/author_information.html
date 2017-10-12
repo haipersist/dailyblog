@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/static/img/hbnn.ico"/>
     <link rel="bookmark" href="/static/img/hbnn.ico"/>
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/blogstyle.css">
+    <link rel="stylesheet" href="/static/css/blogstyles.css">
     <link rel="stylesheet" href="/static/jquery/jquery.Jcrop.min.css">
 
     <script src="/static/jquery/jquery-2.1.3.min.js"></script>
@@ -18,24 +18,26 @@
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 
      <title>作者信息</title>
-        <audio controls="controls" autoplay="autoplay" hidden="true" loop="loop">
-  <source src="http://dailyblog-dailyblog.stor.sinaapp.com/%E5%A4%96%E5%9B%BD%E5%A6%B9%E5%AD%90%E5%80%BE%E6%83%85%E7%BF%BB%E5%94%B1%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB.mp3" type="audio/mpeg" />
-</audio>
+        {# <audio controls="controls" autoplay="autoplay" hidden="true" loop="loop">#}
+  {# <source src="http://dailyblog-dailyblog.stor.sinaapp.com/%E5%A4%96%E5%9B%BD%E5%A6%B9%E5%AD%90%E5%80%BE%E6%83%85%E7%BF%BB%E5%94%B1%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB.mp3" type="audio/mpeg" /></audio> #}
      <style type="text/css">
         * { margin: 0; padding: 0; }
         .clear { clear: both; }
         .email {color: #0000cc}
         .email:hover {color: #cc7428  }
-        #page-wrap { width: 800px; margin: 40px auto 60px; }
+        #page-wrap { width:90%; margin: 40px auto 60px; }
         #pic { float: right; margin: -30px 0 0 0; }
         h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
         h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
         h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
-        #objective { width: 500px; float: left; }
+        #contact-info { width: 60%;}
+        #objective { width: 60%; float: left; }
         #objective p { font-family:Georgia, Serif; font-style: italic; color: #666;font-size: 16px }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
-        dd { width: 600px; float: right; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 10px 0 0; width:10%; float: left; height: 50px;margin-bottom:-40px; border-right: 1px solid #999;  }
+        dd { width: 88%; float: right;padding-left:2%;padding-top:2%}
         dd.clear { float: none; margin: 0; height: 15px; }
+        #dailyblog-main {margin-top: 30px}
+
      </style>
 </head>
 <body id="dailyblog">
@@ -48,8 +50,10 @@
         <div id="dailyblog-content" class="container">
 <div id="article-page" class="well">
              <div id="page-wrap">
-
-        <img src="http://hbnnlove-hbnnlove.stor.sinaapp.com/726049968189011848.jpg " width="245" height="250" alt="Photo of Cthulu" id="pic" />
+        {% load cache %}
+          {% cache 1500 pic %}
+        <img src="/static/img/haibo.jpg" width="40%" alt="Photo of Cthulu" id="pic" />
+        {% endcache %}
 
         <div id="contact-info" class="vcard">
 
@@ -91,15 +95,15 @@
             <dt>个人技能</dt>
             <dd>
                 <ul>
-                    <li>熟练掌握Python语言，C语言；</li>
-                    <li>熟悉Linux系统，Shell脚本；</li>
-                    <li>熟悉MySQL，Redis，Memcached等；</li>
-                    <li>熟悉Flask框架，研读过源码；熟练使用Django框架；</li>
+                    <li>理解操作系统原理，熟练使用Linux系统，熟悉Shell编程；</li>
+                    <li>理解常见数据结构，熟练掌握常用算法以及单例、代理、适配器等常用设计模式；</li>
+                    <li>熟练掌握Python语言，熟悉常用模块；使用过C语言；</li>
+                    <li>熟悉Flask框架，研读过源码；熟练使用Django框架，了解其工作原理；</li>
                     <li>熟悉TCP/IP协议，掌握HTTP协议；</li>
-                    <li>熟悉HTML、CSS，JavaScript，Jquery等前端知识；</li>
-                    <li>熟悉Xpath、正则表达式。</li>
-                    <li>熟练使用Fabric，Beautifulsoup，paramiko,ansible等常用Python模块和框架。</li>
-                    <li>热爱尝试不同技术，开发过微信公众号、爬虫和Python GUI桌面软件等。</li>
+                    <li>熟练使用docker,nginx,supervisor,gunicorn，ansible等。</li>
+                    <li>熟悉celery,RabbitMQ；</li>
+                    <li>熟悉MySQL，Redis，Memcached等；</li>
+                    <li>熟悉HTML、CSS，了解JavaScript，Jquery，Vue等；前端知识；</li>
                 </ul>
             </dd>
 
@@ -107,25 +111,51 @@
 
             <dt>项目经验</dt>
             <dd>
-                 <h2>2016.03—2016.6                 Django个人博客开发</h2>
+                 <h2>2016.03—2016.6                 Django个人网站开发</h2>
                  <ul>
                      <li><strong>职责:</strong>完成系统架构设计，前后端的开发。</li>
-                    <li><strong>实现功能：</strong>用户注册，登录，退出、文章编辑，修改，删除等；自定义用户管理后台.</li>
-                    <li><strong>使用技术：</strong>Django+Bootstrap+Jquery+Nginx+uwsgi等。</li>
-                    <li><strong>网址：</strong>http:/www.dailyblog.applinzi.com</li></ul>
+                    <li><strong>实现功能：</strong>用户注册，登录，退出、文章编辑，修改，删除，招聘信息爬虫等；自定义用户管理后台.</li>
+                    <li><strong>使用技术：</strong>
+                       <ul style="margin-left:15px">
+                           <li >系统管理及部署：Docker + Nginx + supervisor + gunicorn + fabric等；</li>
+                           <li style="marin-left:8px">后端： Django + celery + MySQL + Memcached + Redis；</li>
+                           <li style="marin-left:8px">前端：Bootstrap + Javascript + jquery + Vue + Datatables + Highcharts等。</li>
+                       </ul>
+                    </li>
+                    <li><strong>网址：</strong>http:/hbnnforever.cn</li></ul>
+                <h2>2016.02—2016.3                微信公众号开发</h2>
+                 <ul>
+                     <li><strong>职责:</strong>完成公众号的后台开发</li>
+                    <li><strong>实现功能：</strong>用户可发送文章到数据库保存文章以及查看文章；可与机器人对话（查询天气，列车，公交等等）；收听音乐</li>
+                    <li><strong>使用技术：</strong>Django等。</li>
+                 </ul>
               <h2>2015.06—2015.12                 Flask个人博客开发</h2>
              <ul>
                      <li><strong>职责:</strong>完成系统架构设计，前后端的开发。</li>
                     <li><strong>实现功能：</strong>用户注册，登录，退出、文章编辑，修改，删除、在线笔记本、工作信息爬虫、定时发送微博等。   </li>
                     <li><strong>使用技术：</strong>Flask+Bootstrap+Highcharts+Jquery+多进程等。</li>
-                    <li><strong>网址：</strong>http:/www.hbnnlove.applinzi.com</li>
+                    <li><strong>网址：</strong>http:/www.hbnnlove.applinzi.com(offline)</li>
              </ul>
                 <h2>2014.10—2014.11                 招聘信息爬虫</h2>
              <ul>
                      <li><strong>职责:</strong>编写爬虫代码，爬去多个网站的招聘信息</li>
-                    <li><strong>实现功能：</strong>多进程爬取多个网站的招聘信息。 </li>
-                    <li><strong>使用技术：</strong>BeautifulSoup+多进程等。</li>
+                    <li><strong>实现功能：</strong>爬取多个网站的招聘信息。 </li>
+                    <li><strong>使用技术：</strong>scrapy + BeautifulSoup + requests + redis等。</li>
              </ul>
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>获奖经历</dt>
+            <dd><h2>证书</h2>
+
+            <p>华为HCNP证书</p>
+            <p>RHCSA红帽认证</p>
+                <h2>在校期间</h2>
+
+            <p>研究生获得多次二等奖学金</p>
+            <p>获得多次校运动会100，200，4*100米冠军</p>
+
             </dd>
 
             <dd class="clear"></dd>
@@ -138,14 +168,11 @@
             在海边。</p>
 
             <h2>特长</h2>
-             <p>擅长短跑，爆发力较强，获得多次校运动会100米，200米短跑冠军</p></dd>
+             <p>擅长短跑，爆发力较强；嘘....我也是一个情歌小王子，曾以一首《我愿意》征服全班，哈哈。</p></dd>
 
             <dd class="clear"></dd>
 
-            <dt>微信公众号</dt>
-            <dd><img src="http://hbnnlove-hbnnlove.stor.sinaapp.com/qrcode_for_gh_da11b2301e9e_430.jpg" width="200" height="200"/> </dd>
 
-            <dd class="clear"></dd>
         </dl>
 
         <div class="clear"></div>
@@ -156,17 +183,18 @@
         </div>
 
 
-    <footer id="myfoot">
+    <footer id="myfooter">
         <hr class="featurette-divider">
       <div class="container-fluid">
 
          <div class="row">
              <div class="col-md-4">
-             <p>版权所有 © 2016 dailyblog.applinzi.com All right Reserved </p>
+             <p>版权所有 © 2016-2017 hbnnforever.cn All right Reserved </p>
+             <p><a href="http://www.miitbeian.gov.cn/">京ICP备17048457号</a></p>
             </div>
              <div class="col-md-5">
-             <p>基于Django搭建</p>
-             <p>静态存储利用SAE的storage及七牛云存储</p>
+             <p>基于supervisor + gunicorn + Django搭建</p>
+             <p>静态存储利用SAE的storage及tencent云存储</p>
              <p>本页面加载时间:<!!LOAD_TIMES!!>s</p>
              </div>
              <div class="col-md-3">
@@ -182,18 +210,7 @@
 
 </body>
 
- <script type="text/javascript">
-var duoshuoQuery = {short_name:"dailyblog"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0]
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<script type="text/javascript" src="/static/js/vmaig.js"></script>
+
 {% block js%}{% endblock%}
 
 </html>

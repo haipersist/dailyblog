@@ -1,0 +1,91 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}<title>Dashboard</title>{% endblock %}
+{%block css %}
+ <!-- Vendors -->
+        <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/bootstrap-datepicker/css/datepicker.css">
+        <link rel="stylesheet" media="screen" href="/static/dashboard/css/datepicker.fixes.css">
+        <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/uniform/themes/default/css/uniform.default.min.css">
+        <link rel="stylesheet" media="screen" href="/static/dashboard/css/uniform.default.fixes.css">
+        <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/chosen.min.css">
+        <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/selectize/dist/css/selectize.bootstrap3.css">
+        <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/stylesheets/bootstrap-wysihtml5/core-b3.css">
+        <style type="text/css">
+
+            .uprofile {
+                margin-top: 80px;
+            }
+
+            .uprofile li {
+                list-style-type: none;
+                margin-top: 20px;
+                font-size: 16px;
+                color: #0000ee;
+            }
+
+            .ubase {
+                font-size: 16px;
+                color: #0000ee;
+                #padding-top: 20%;
+                margin-top: 10%;
+            }
+
+        </style>
+{%endblock%}
+
+
+
+{%block content %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default bootstrap-admin-no-table-panel">
+                <div class="panel-heading">
+                    <div class="text-muted bootstrap-admin-box-title">
+                        个人信息
+                    <strong style="float: right"><a href="/account/changeuserprofile/">编辑</a> </strong>
+                    </div>
+                </div>
+                <div class="bootstrap-admin-no-table-panel-content bootstrap-admin-panel-content collapse in">
+                    <div class="row">
+                        <div class="col-md-4">
+                            {% if userprofile.avator %}
+                                <img src="{{ userprofile.avator.url }}" width="80%"/>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-8">
+                            <p class="ubase"><strong>姓名：</strong>{{ user.username }}</p>
+                            <p class="ubase"><strong>注册时间：</strong>{{ user.date_joined|date:"Y-m-d" }}</p>
+                            <p class="ubase"><strong>发表文章：</strong>{{ publish_article }}篇</p>
+                        </div>
+                    </div>
+                    <ul class="uprofile">
+                        <li class="userprofile"><strong>性别：</strong>{{ userprofile.gender }}</li>
+                        <li class="userprofile"><strong>年龄：</strong>{{ userprofile.age }}</li>
+                        <li class="userprofile"><strong>毕业院校：</strong>{{ userprofile.school }}</li>
+                        <li class="userprofile"><strong>爱好：</strong>{{ userprofile.hobby }}</li>
+                        <li class="userprofile"><strong>座右铭：</strong>{{ userprofile.motto }}</li>
+                        <li class="userprofile"><strong>自我介绍：</strong>{{ userprofile.self_introduction }}</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+{%endblock%}
+
+{%block bodyscript %}
+        <script type="text/javascript" src="/static/dashboard/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/dashboard/js/twitter-bootstrap-hover-dropdown.min.js"></script>
+        <script type="text/javascript" src="/static/dashboard/js/bootstrap-admin-theme-change-size.js"></script>
+        <script type="text/javascript" src="/static/dashboard/vendors/uniform/jquery.uniform.min.js"></script>
+        <script type="text/javascript" src="/static/dashboard/vendors/chosen.jquery.min.js"></script>
+        <script type="text/javascript" src="/static/dashboard/vendors/selectize/dist/js/standalone/selectize.min.js"></script>
+        <script type="text/javascript" src="/static/dashboard/vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="/static/dashboard/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/javascripts/bootstrap-wysihtml5/wysihtml5.js"></script>
+        <script type="text/javascript" src="/static/dashboard/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/javascripts/bootstrap-wysihtml5/core-b3.js"></script>
+        <script type="text/javascript" src="/static/dashboard/vendors/twitter-bootstrap-wizard/jquery.bootstrap.wizard-for.bootstrap3.js"></script>
+        <script type="text/javascript" src="/static/dashboard/vendors/boostrap3-typeahead/bootstrap3-typeahead.min.js"></script>
+
+{% endblock %}

@@ -1,40 +1,57 @@
 {% extends "base.html" %}
 {%block title%}
-<title>{{website_name}}</title>
+<title>{{website_title}}</title>
 {% endblock %}
-{%block main%}
-<div class="row">
-    <div class="col-md-8 col-lg-9">
-        <!-- 警告框 -->
-        <div class="well logion">
-            {{logion}}
-        </div>
 
+
+{% block blogheader %}
+         {% if not keyword %}
+                {% include "include/backheader.html"%}
+                {% include "include/ourlife.html"%}
+                {% include "include/carousel.html"%}
+            {% endif %}
+
+{% endblock %}
+
+{% block main %}
+<div class="row">
+
+
+    <div class="col-md-8 col-lg-9">
         <!-- 首页文章列表 -->
         <div id="main-content">
-            <!-- 首页轮播 -->
-
-
-            {% if not keyword %}
-            {% if carousel_page_list%}
-            {% include "include/carousel.html"%}
-            {% endif %}
-            {% endif %}
-
-
-            <!--首页文章列表 -->
+            <!--首页文章列表，如果有关键词的时候才会显示-->
             {% if article_list %}
-            {% with post_list=article_list %}
-            {% for post in post_list %}
-                {% include "include/home_post.html" %}
-            {% endfor %}
-            {% endwith %}
-            {% endif %}
+                {% with post_list=article_list %}
+                {% for post in post_list %}
+                    {% include "include/home_post.html" %}
+                {% endfor %}
+                {% endwith %}
 
+                <!--分页 -->
+                {% if page_obj%}
+                    {% if not keyword %}
+                        {% include "include/pagination.html"%}
+                    {% else %}
+                        {% include "include/keywordpagination.html"%}
+                    {% endif %}
+                {% endif %}
+            {% else %}
+                <div class="row">
+                    <div id="index-cat" class="col-md-6">
+                        {% include "include/mylatest_articles.html"%}
+                        {% include "include/mydjango.html"%}
+                        {% include "include/mydairy.html"%}
+                        {% include "include/youxiuwenzhang.html"%}
+                    </div>
+                    <div class="col-md-6">
+                        {% include "include/myhottest_articles.html"%}
+                        {% include "include/myweb.html"%}
+                        {% include "include/mingrenzuopin.html"%}
+                        {% include "include/jingdianyulu.html"%}
 
-            <!--分页 -->
-            {% if page_obj%}
-            {% include "include/pagination.html"%}
+                    </div>
+                </div>
             {% endif %}
         </div>
     </div>
@@ -44,8 +61,11 @@
     <div class="col-md-4 col-lg-3 hidden-xs">
       {% include "include/search.html"%}
        {% include "include/author_info.html"%}
-      {% include "include/hottest_articles.html"%}
-      {% include "include/latest_comments.html"%}
+      {# {% include "include/hottest_articles.html"%} #}
+      {% include "include/categories.html"%}
+       {% include "include/latest_comments.html"%}
+        {% include "include/weiboshow.html"%}
+
 
     </div>
 </div>

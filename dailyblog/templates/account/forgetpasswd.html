@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{%block title%}
+<title>用户登录</title>
+{% endblock %}
+
+
+{% block main %}
+
+{% url 'register-view' as register_url %}
+<div class="row">
+  <div id="article-content" class="col-md-4 "></div>
+   <div id="article-content" class="col-md-5 ">
+    <div id="blog-login">
+  <div class="panel panel-primary">
+      {% if sent %}
+      <p>重置密码链接已经发到您邮箱，请到注册的邮箱查收。</p>
+      {%  else %}
+        <div class="panel-heading">
+            <h3 class="panel-title">请输入注册的邮箱</h3>
+        </div>
+        <br>
+    <form id="login-form" class="form-horizontal clearfix" method="post" action="">
+         {% csrf_token %}
+        {%  if note %}
+         {{ note }}
+        {% endif %}
+            <div class="form-group">
+                {{form.email.errors}}
+                <label for="vmaig-auth-register-username" class="col-sm-3 control-label">邮箱：</label>
+                <div class="col-sm-7">
+                    {% csrf_token %}
+                   {{form.email}}
+                </div>
+            </div>
+
+            <br/>
+            <button id="login-button" type="submit" class="btn btn-success">确认</button>
+        </form>
+      {% endif %}
+  </div>
+</div>
+   </div>
+</div>
+ {% endblock %}
