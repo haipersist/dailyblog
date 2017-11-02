@@ -15,7 +15,7 @@ class Wechat():
 
     def __init__(self):
         self.token = 'hbnnforever'
-        self.secret ='1b2631e7e3a222abffb794916d162fb6'
+        self.secret ='*****'
         self.article_table = 'blog_wearticle'
 
     def auth(self,timestamp, nonce, signature,echostr):
