@@ -1,6 +1,7 @@
 
 #1.Introduction
 
+
 It is written by django ,djangorestframwork,celery and so on.
 
 As for database,I use MySQL ,Redis and Memcached.Of course,Memcache is used to be one cache.
@@ -10,8 +11,8 @@ Font End:bootstrap,jquery,datatables,vue and javascript.
 The Blog provides several modules,such as article module,account management,dashboard etc.
 
 
-demo:<a href="http://hbnnforever.cn">Demo</a>
 
+demo:<a href="http://hbnnforever.cn">Demo</a>
 
 
 #2.Function
@@ -20,6 +21,7 @@ blog,job,trip,account
 
 #3.Project structure
 
+<<<<<<< HEAD
 ├── apps
 │   ├── account
 │   ├── blog
@@ -51,6 +53,42 @@ blog,job,trip,account
     ├── baseclass/
     ├── cache.py
     ├── ....
+=======
+
+        ├── apps
+        │   ├── account
+        │   ├── blog
+        │   ├── comment
+        │   ├── dashboard
+        │   ├── __init__.py
+        │   ├── job
+        │   └── trip
+        ├── dailyblog
+        │   ├── celery.py
+        │   ├── __init__.py
+        │   ├── settings.py
+        │   ├── urls.py
+        │   ├── wsgi.py
+        ├── dailyblog.conf
+        ├── docker-compose.yml
+        ├── Dockerfile
+        ├── gunicorn.conf
+        ├── __init__.py
+        ├── manage.py
+        ├── media
+        │   ├── ckeditor
+        │   └── userimg
+        ├── README.md
+        ├── requirements.txt
+        ├── restart.sh
+        ├── static/
+        ├── supervisor.conf
+        ├── templates/
+        └── utils
+            ├── baseclass/
+            ├── cache.py
+            ├── ....
+
 
 
 Every app has iteself model,form ,view and url.
@@ -62,6 +100,7 @@ In additions,the api is edited in app:blog.
 
 The website should be deployed in Linux enviroment,os ubuntu.if you want to study
 Django,the website provides a complete example
+
                       
 After downloading,you should do like this below:                      
 1.create your virutal enviroment using virtualenv                           
@@ -84,6 +123,7 @@ After downloading,you should do like this below:
 8.All above is necessary.
 
 
+
 In fact ,you can deploy website using fabric ,I have wrote one fabfile.
 
 but I do not add it on this code.
@@ -97,8 +137,26 @@ you can get it in my blog:<a href="http://hbnnforever.cn/article/deployweb.html"
    V1.1   first version
 
 
+#5.Versions
+
+ Version 2:
+
+  2017-10-01
+
+      1. Reconstruct code project,
+
+      2. convert func view to class based view.
+
+
+ Version 1:
+
+   2016-05-03
+
+
+
 #6.Author
 
 Haibo Wang
 
 Wechat & QQ:393993705
+

@@ -2,122 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0a9281f-e661-4854-bee8-7cb911d66ea6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/blog/api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/wechat/wechat/base_spider.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/account/changeuserprofile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/cos_client.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/datepicker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/account/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/blog/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/logion.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/blog/middleware.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/blog/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/blog/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/blog/tasks.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/comment/tasks.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/trip/tripindex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/triplist.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/blog/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/dashboard/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/job/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/trip/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/wechat/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/account/userprofile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/blog/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/blog/viewset.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/www.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/api.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/blackviews.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/dashboard_views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/forms.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/middleware.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0002_auto_20160425_1624.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0003_auto_20160425_1944.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0004_auto_20160426_1129.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0005_auto_20160428_2018.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0006_auto_20160512_1141.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0007_auto_20160519_1110.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0008_auto_20160519_1235.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0009_auto_20160519_1243.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/migrations/0010_auto_20160628_2232.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/resources/BaseSdk.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/resources/StoreData.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/resources/logion.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/resources/test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/resources/weather.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/serializer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dailyblog_nginx.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/start_local.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/skin.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/blacklist/loadeddata.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/blacklist/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/blacklist/register.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/blacklist/resetpwd.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/blacklist/upload_file.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/cost.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/dashboard/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/tag.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog/__init__.py" afterPath="$PROJECT_DIR$/apps/blog/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog/admin.py" afterPath="$PROJECT_DIR$/apps/blog/admin.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog/apps.py" afterPath="$PROJECT_DIR$/apps/blog/apps.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog/migrations/__init__.py" afterPath="$PROJECT_DIR$/apps/blog/migrations/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog/resources/__init__.py" afterPath="$PROJECT_DIR$/dailyblog/celery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog/tests.py" afterPath="$PROJECT_DIR$/apps/blog/tests.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/changepassword.html" afterPath="$PROJECT_DIR$/templates/account/changepassword.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/forgetpasswd.html" afterPath="$PROJECT_DIR$/templates/account/forgetpasswd.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/account/login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/register.html" afterPath="$PROJECT_DIR$/templates/account/register.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/resetpwd.html" afterPath="$PROJECT_DIR$/templates/account/resetpwd.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/test.html" afterPath="$PROJECT_DIR$/templates/include/article_header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/errors/403.html" afterPath="$PROJECT_DIR$/templates/errors/403.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/errors/404.html" afterPath="$PROJECT_DIR$/templates/errors/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/errors/500.html" afterPath="$PROJECT_DIR$/templates/errors/500.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dailyblog/__init__.py" afterPath="$PROJECT_DIR$/dailyblog/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/add_article.html" afterPath="$PROJECT_DIR$/templates/dashboard/add_article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/article.html" afterPath="$PROJECT_DIR$/templates/article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/articles.html" afterPath="$PROJECT_DIR$/templates/dashboard/articles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/author_info.html" afterPath="$PROJECT_DIR$/templates/include/author_info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/author_information.html" afterPath="$PROJECT_DIR$/templates/author_information.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/base.html" afterPath="$PROJECT_DIR$/templates/dashboard/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/blogstyle.css" afterPath="$PROJECT_DIR$/static/css/blogstyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/dashboard/css/bootstrap-admin-theme.css" afterPath="$PROJECT_DIR$/static/dashboard/css/bootstrap-admin-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/cache.py" afterPath="$PROJECT_DIR$/utils/cache.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/carousel.html" afterPath="$PROJECT_DIR$/templates/include/carousel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/category.html" afterPath="$PROJECT_DIR$/templates/category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/changeinfo.html" afterPath="$PROJECT_DIR$/templates/dashboard/changeinfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dailyblog.conf" afterPath="$PROJECT_DIR$/dailyblog.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/dashboard.css" afterPath="$PROJECT_DIR$/static/css/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/get_real_ip.py" afterPath="$PROJECT_DIR$/utils/get_real_ip.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gunicorn.conf" afterPath="$PROJECT_DIR$/gunicorn.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/home_post.html" afterPath="$PROJECT_DIR$/templates/include/home_post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/hottest_articles.html" afterPath="$PROJECT_DIR$/templates/include/hottest_articles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/jsonify.py" afterPath="$PROJECT_DIR$/utils/jsonify.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/latest_comments.html" afterPath="$PROJECT_DIR$/templates/include/latest_comments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/modify_article.html" afterPath="$PROJECT_DIR$/templates/dashboard/modify_article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/nav.html" afterPath="$PROJECT_DIR$/templates/include/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/pagination.html" afterPath="$PROJECT_DIR$/templates/include/pagination.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/permissions.py" afterPath="$PROJECT_DIR$/utils/permissions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/search.html" afterPath="$PROJECT_DIR$/templates/include/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dailyblog/settings.py" afterPath="$PROJECT_DIR$/dailyblog/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supervisor.conf" afterPath="$PROJECT_DIR$/supervisor.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/token.py" afterPath="$PROJECT_DIR$/utils/token.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dailyblog/urls.py" afterPath="$PROJECT_DIR$/dailyblog/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dailyblog/wsgi.py" afterPath="$PROJECT_DIR$/dailyblog/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -214,10 +101,10 @@
         <option value="$PROJECT_DIR$/apps/blog/models.py" />
         <option value="$PROJECT_DIR$/apps/blog/views.py" />
         <option value="$PROJECT_DIR$/apps/blog/forms.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/apps/dashboard/admin.py" />
         <option value="$PROJECT_DIR$/dailyblog/settings.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -264,6 +151,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="www-version3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www-version3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www-version3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -743,17 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor.conf">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7356322">
-          <caret line="166" column="0" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -794,22 +680,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/cos_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1487069">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/djmodel2dict.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.11530172">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -904,7 +780,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -914,7 +790,7 @@
         <state vertical-scroll-proportion="0.2974138">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="e#25#64#0" expanded="true" />
+            <element signature="e#25#64#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -932,7 +808,7 @@
         <state vertical-scroll-proportion="0.4213362">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -945,22 +821,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.570043">
-          <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
-          <folding>
-            <element signature="e#359#398#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/account/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07435345">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#71#105#0" expanded="true" />
+            <element signature="e#71#105#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -986,7 +852,7 @@
         <state vertical-scroll-proportion="0.64439654">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="e#65#74#0" expanded="true" />
+            <element signature="e#65#74#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1004,7 +870,7 @@
         <state vertical-scroll-proportion="0.7273707">
           <caret line="66" column="71" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="71" />
           <folding>
-            <element signature="e#68#122#0" expanded="true" />
+            <element signature="e#68#122#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1014,7 +880,7 @@
         <state vertical-scroll-proportion="-2.544181">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#27#66#0" expanded="true" />
+            <element signature="e#27#66#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1032,7 +898,7 @@
         <state vertical-scroll-proportion="0.35560346">
           <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
           <folding>
-            <element signature="e#66#150#0" expanded="true" />
+            <element signature="e#66#150#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1058,7 +924,7 @@
         <state vertical-scroll-proportion="0.27262932">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
           <folding>
-            <element signature="e#257#296#0" expanded="true" />
+            <element signature="e#257#296#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1076,7 +942,7 @@
         <state vertical-scroll-proportion="0.09913793">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#48#63#0" expanded="true" />
+            <element signature="e#48#63#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1086,7 +952,7 @@
         <state vertical-scroll-proportion="0.80172414">
           <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
           <folding>
-            <element signature="e#26#37#0" expanded="true" />
+            <element signature="e#26#37#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1127,7 +993,7 @@
         <state vertical-scroll-proportion="1.15">
           <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
           <folding>
-            <element signature="e#26#150#0" expanded="true" />
+            <element signature="e#26#150#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1137,23 +1003,9 @@
         <state vertical-scroll-proportion="0.6594037">
           <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
           <folding>
-            <element signature="e#66#80#0" expanded="true" />
+            <element signature="e#66#80#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.63073397">
-            <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
@@ -1164,20 +1016,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dailyblog.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4022223">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/dashboard/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4213362">
           <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
-            <element signature="e#27#59#0" expanded="true" />
+            <element signature="e#27#59#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1186,6 +1030,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24581006">
           <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="1.1318808">
+            <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dailyblog.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2588889">
+          <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor.conf">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3218391">
+          <caret line="130" column="18" selection-start-line="130" selection-start-column="18" selection-end-line="130" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.2790947">
+          <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/cos_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09913793">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
