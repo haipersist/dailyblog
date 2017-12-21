@@ -21,73 +21,38 @@ blog,job,trip,account
 
 #3.Project structure
 
-<<<<<<< HEAD
-├── apps
-│   ├── account
-│   ├── blog
-│   ├── comment
-│   ├── dashboard
-│   ├── __init__.py
-│   ├── job
-│   └── trip
-├── dailyblog
-│   ├── celery.py
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-├── dailyblog.conf
-├── gunicorn.conf
-├── __init__.py
-├── manage.py
-├── media
-│   ├── ckeditor
-│   └── userimg
-├── README.md
-├── requirements.txt
-├── restart.sh
-├── static/
-├── supervisor.conf
-├── templates/
-└── utils
-    ├── baseclass/
-    ├── cache.py
-    ├── ....
-=======
 
-        ├── apps
-        │   ├── account
-        │   ├── blog
-        │   ├── comment
-        │   ├── dashboard
-        │   ├── __init__.py
-        │   ├── job
-        │   └── trip
-        ├── dailyblog
-        │   ├── celery.py
-        │   ├── __init__.py
-        │   ├── settings.py
-        │   ├── urls.py
-        │   ├── wsgi.py
-        ├── dailyblog.conf
-        ├── docker-compose.yml
-        ├── Dockerfile
-        ├── gunicorn.conf
-        ├── __init__.py
-        ├── manage.py
-        ├── media
-        │   ├── ckeditor
-        │   └── userimg
-        ├── README.md
-        ├── requirements.txt
-        ├── restart.sh
-        ├── static/
-        ├── supervisor.conf
-        ├── templates/
-        └── utils
-            ├── baseclass/
-            ├── cache.py
-            ├── ....
+    ├── apps
+    │   ├── account
+    │   ├── blog
+    │   ├── comment
+    │   ├── dashboard
+    │   ├── __init__.py
+    │   ├── job
+    │   └── trip
+    ├── dailyblog
+    │   ├── celery.py
+    │   ├── __init__.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   ├── wsgi.py
+    ├── dailyblog.conf
+    ├── gunicorn.conf
+    ├── __init__.py
+    ├── manage.py
+    ├── media
+    │   ├── ckeditor
+    │   └── userimg
+    ├── README.md
+    ├── requirements.txt
+    ├── restart.sh
+    ├── static/
+    ├── supervisor.conf
+    ├── templates/
+    └── utils
+        ├── baseclass/
+        ├── cache.py
+        ├── ....
 
 
 
