@@ -1,3 +1,4 @@
+
 <ul class="pagination pagination-centered pagination-medium">
         <li><a href="?page=1">首页 </a></li>
     {% if  page_obj.has_previous %}
@@ -9,15 +10,35 @@
             <a>上一页</a>
         </li>
     {% endif %}
-    {% for page in paginator.page_range %}
-     {% if page != page_obj.number %}
-        <li><a href="?page={{page}}">{{page}} </a></li>
-    {% else %}
-     <li class="active"><a>{{page}}</a></li>
+
+    {% if page_obj.number|add:"-3" > 2 %}
+      <li><a>.....</a></li>
     {% endif %}
+
+    {% for page in display_page_range %}
+        {% if not page %}
+           <li class="active"><a>{{page_obj.number}}</a></li>
+        {% else %}
+          {% if page > 0 %}
+            {% if page_obj.number|add:page < paginator.num_pages %}
+                <li><a href="?page={{page_obj.number|add:page}}">{{page_obj.number|add:page}}</a></li>
+            {% endif %}
+          {% else %}
+            {% if page_obj.number|add:page >= 1 %}
+                <li><a href="?page={{page_obj.number|add:page}}">{{page_obj.number|add:page}}</a></li>
+            {% endif %}
+          {% endif %}
+        {% endif %}
     {% endfor %}
 
+     {% if paginator.num_pages > page_obj.number|add:"3" %}
+      <li><a>.....</a></li>
+    {% endif %}
 
+    {% if page_obj.number != paginator.num_pages %}
+                <li><a href="?page={{paginator.num_pages}}">{{paginator.num_pages}}</a></li>
+    {% endif %}
+	
     {% if  page_obj.has_next%}
         <li class="abled">
             <a href="?page={{page_obj.next_page_number}}">下一页</a>
@@ -27,5 +48,12 @@
             <a>下一页 </a>
         </li>
     {% endif %}
-            <li><a href="?page={{paginator.num_pages}}">末页</a></li>
+        <li><a href="?page={{paginator.num_pages}}">末页</a></li>
+
+    <li id="gotopage">
+        <span>
+            <input type="text" size="5" value=""/>
+        </span>
+    </li>
+    <li><a href="javascript:void(0);" onclick="gotopage();">跳转到此页</a></li>
 </ul>

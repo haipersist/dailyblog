@@ -1,0 +1,53 @@
+<ul class="pagination pagination-centered pagination-medium">
+        <li><a href="?keyword={{keyword}}&page=1">首页 </a></li>
+    {% if  page_obj.has_previous %}
+        <li class="abled">
+            <a href="?keyword={{keyword}}&page={{page_obj.previous_page_number}}"> 上一页</a>
+        </li>
+    {% else %}
+        <li class="disabled">
+            <a>上一页</a>
+        </li>
+    {% endif %}
+
+   {% if page_obj.number|add:"-3" > 2 %}
+      <li><a>.....</a></li>
+    {% endif %}
+
+    {% for page in display_page_range %}
+        {% if not page %}
+           <li class="active"><a>{{page_obj.number}}</a></li>
+        {% else %}
+          {% if page > 0 %}
+            {% if page_obj.number|add:page < paginator.num_pages %}
+        <li><a href="?keyword={{keyword}}&page={{page_obj.number|add:page}}">{{page_obj.number|add:page}}</a></li>
+            {% endif %}
+          {% else %}
+            {% if page_obj.number|add:page >= 1 %}
+        <li><a href="?keyword={{keyword}}&page={{page_obj.number|add:page}}">{{page_obj.number|add:page}}</a></li>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+    {% endfor %}
+
+     {% if paginator.num_pages > page_obj.number|add:"3" %}
+      <li><a>.....</a></li>
+    {% endif %}
+
+    {% if page_obj.number != paginator.num_pages %}
+        <li><a href="?keyword={{keyword}}&page={{paginator.num_pages}}">{{paginator.num_pages}}</a></li>
+    {% endif %}
+
+
+
+    {% if  page_obj.has_next%}
+        <li class="abled">
+            <a href="?keyword={{keyword}}&page={{page_obj.next_page_number}}">下一页</a>
+        </li>
+    {% else %}
+        <li class="disabled">
+            <a>下一页 </a>
+        </li>
+    {% endif %}
+            <li><a href="?keyword={{keyword}}&page={{paginator.num_pages}}">末页</a></li>
+</ul>

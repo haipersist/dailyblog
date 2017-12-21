@@ -1,0 +1,16 @@
+<div id="triplist">
+  <div class="grid">
+      {% for trip in trip_list %}
+          <a href="{{ trip.article_url }}">
+        <figure class="{{ trip.figure_type }}">
+            <img src="{{ trip.img }}" alt="img01"/>
+            <figcaption>
+                <h2>{{ trip.title }}</h2>
+                <p>{{ trip.abstract }}</p>
+
+            </figcaption>
+        </figure>
+          </a>
+      {% endfor %}
+    </div>
+</div>

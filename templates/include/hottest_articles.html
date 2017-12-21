@@ -1,19 +1,30 @@
 
-<div id="blog">
+<div id="categories_sidebar">
     <div class="panel panel-dailyblog">
+
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
         <div class="panel-heading">
-            <h3 class="panel-title">
-                <span class="glyphicon glyphicon-flag"></span>
-                热门文章
-            </h3>
+          <ul class="nav nav-tabs">
+            <li class="active" style="color: #cba00d"><a href="#tab1" data-toggle="tab">热门文章</a></li>
+            <li style="color: #cba00d"><a href="#tab2"  data-toggle="tab">最新文章</a></li>
+          </ul>
         </div>
-        <ul id="hottest-article-list" class="list-group collapse in">
-            {% for article in hottest_articles %}
-                <li class="list-group-item">
-                <span class="hotest-post-title"><a href="{% url 'article-detail-view' article.alias %}">{{article.title}}</a> </span>
-                <span class="badge">{{article.read_times}}</span>
-                </li>
-            {% endfor %}
-        </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+          <ul id="hottest-article-list" class="list-group collapse in">
+              </ul>
+        </div>
+        <div class="tab-pane" id="tab2">
+          <ul id="latest-article-list" class="list-group collapse in">
+              </ul>
+        </div>
+      </div>
+    </div>
     </div>
 </div>
+
+
+
+
+

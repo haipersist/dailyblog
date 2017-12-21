@@ -3,14 +3,29 @@
 {% block title %}<title>Dashboard</title>{% endblock %}
 {%block css %}
  <!-- Vendors -->
-        <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/bootstrap-datepicker/css/datepicker.css">
         <link rel="stylesheet" media="screen" href="/static/dashboard/css/datepicker.fixes.css">
         <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/uniform/themes/default/css/uniform.default.min.css">
         <link rel="stylesheet" media="screen" href="/static/dashboard/css/uniform.default.fixes.css">
         <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/chosen.min.css">
         <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/selectize/dist/css/selectize.bootstrap3.css">
         <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/stylesheets/bootstrap-wysihtml5/core-b3.css">
+<link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/jquery/jquery-2.1.3.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
+ <script src="https://cdn.bootcss.com/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+ <script type="text/javascript">
+    $(function() {
 
+        $("#datepicker").datepicker(
+                {
+                    format:'yyyy-mm-dd'
+                }
+        );
+
+    });
+ </script>
 {%endblock%}
 
 
@@ -35,30 +50,47 @@
                         {% for error in errors %}
                          <p style="color: #e63c16" >{{error}}</p>
                         {% endfor %}
+                        {{ form.errors }}
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="typeahead">标题*</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control col-md-6" id="typeahead" name="title" value="">
-                                <p class="help-block">文章标题不能超过150个字符!</p>
+                                {{ form.title.errors }}
+                               {{ form.title }}
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="typeahead2">英文标题*</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control col-md-6" id="typeahead" name="alias" value="">
-                                <p class="help-block">仅输入英文字符或数字.</p>
+                            {{ form.alias.errors }}
+                               {{ form.alias }}
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-lg-2 control-label" for="textarea-wysihtml5">正文*</label>
                             <div class="col-lg-10">
-                              <textarea id="textarea-wysihtml5" class="form-control textarea-wysihtml5" name="content" placeholder="Enter text..." style="width: 100%; height: 200px"></textarea>
+                                {{ form.content.errors }}
+                                {{ form.media }}
+                                {{ form.content }}
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="textarea-wysihtml5">概要*</label>
+                            {{ form.abstract.errors }}
+                            {{ form.abstract }}
+                        </div>
                          <div class="form-group">
+                            <label class="col-lg-2 control-label" for="typeahead2">旅游日期*</label>
+                            <div class="col-lg-10">
+                               <input type="text"  id="datepicker" name="trip_date" value="">
+                                <p class="help-block">填写游记时添加.</p>
+
+                            </div>
+                        </div>
+                      <div class="form-group">
                             <label class="col-lg-2 control-label" for="typeahead2">标签*</label>
                             <div class="col-lg-10">
+                                {{ form.tags.errors }}
                                 {{form.tags}}
                                 <p class="help-block">用逗号隔开，逗号是英文逗号.</p>
 

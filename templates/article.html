@@ -1,16 +1,97 @@
 {% extends "base.html" %}
 {%block title%}
-<title>{{website_name}}&nbsp;|&nbsp;{{article.title}}</title>
-<audio controls="controls" autoplay="autoplay" hidden="true" loop="loop">
-  <source src="http://dailyblog-dailyblog.stor.sinaapp.com/%E5%A4%96%E5%9B%BD%E5%A6%B9%E5%AD%90%E5%80%BE%E6%83%85%E7%BF%BB%E5%94%B1%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB.mp3" type="audio/mpeg" />
-</audio>
+<title>{{website_title}}&nbsp;|&nbsp;{{article.title}}</title>
+{#<audio controls="controls" autoplay="autoplay" hidden="true" loop="loop">#}
+ {# <source src="http://dailyblog-dailyblog.stor.sinaapp.com/%E5%A4%96%E5%9B%BD%E5%A6%B9%E5%AD%90%E5%80%BE%E6%83%85%E7%BF%BB%E5%94%B1%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB.mp3" type="audio/mpeg" /></audio>>#}
 {% endblock %}
 
-{% block main %}
+{% block css%}
+<link type="text/css" rel="stylesheet" href="/static/syntaxhighlighter/styles/shCoreDefault.css"/>
+<style type="text/css">
+    #article {
+        font-size:14px;
+        color:#000;
+    }
+
+    blockquote {
+        font-size:14px;
+    }
+</style>
+    <style type="text/css">
+
+
+#vcomments {
+ background-color: rgba(27, 255, 213, 0.04)!important;
+}
+
+#comment {
+
+}
+
+.createcomment {
+    width: 100%;
+}
+
+button {
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 3px;
+    transition: .4s ease-out;
+    color: #fff;
+    background-color: #0090d3;
+}
+
+.comment {
+
+}
+
+#cobtn {
+    margin-top: 65px;
+    #padding-top: 10%;
+}
+
+.commentreply {
+
+}
+
+.comment-content {
+    margin:0.6% 3% 3% 3%;
+    width: 90%;
+    font-size: 14px;
+}
+
+.authorheader {
+    margin-right: 10px;
+    margin-left: 1%;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.commentcreatetime {
+    font-size: 12px;
+    color: rgba(161, 113, 253, 0.49);
+    display: inline-block;
+}
+
+
+    </style>
+
+ <link rel="stylesheet" href="/static/css/materialize.css"/>
+<link href="https://cdn.bootcss.com/sco.js/1.1.0/css/sco.message.css" rel="stylesheet">
+
+
+{% endblock %}
 
 {% url 'category-article-list-view' article.category.alias as category_url %}
+{%block blogheader%}
+   {% include "include/article_header.html" %}
+ {% endblock %}
 
+
+{% block main %}
 <div class="row">
+
+
     <div id="article-content" class="col-md-8 col-lg-9">
         <div id="article-page" class="well">
             <div id="article">
@@ -19,10 +100,14 @@
                 </div>
              <ol class="breadcrumb">
                <li><a>
-                    <span style="color: rgba(171, 43, 22, 0.65)" class="glyphicon glyphicon-user">作者：</span> {{article.author}}
+                   {% if 'wechat' in article.alias %}
+                    <span style="color: rgba(171, 43, 22, 0.65)" class="glyphicon glyphicon-user">作者：</span> {{article.tags}}
+                   {% else %}
+                   <span style="color: rgba(171, 43, 22, 0.65)" class="glyphicon glyphicon-user">作者：</span> {{article.author}}
+                   {% endif %}
                 </a></li>
-                <li><span style="color:  rgba(171, 43, 22, 0.65)">分类：</span><a href="{{category_url}}">{{article.category}}</a></li>
-                <li class="hidden-xs"><a><span style="color: rgba(171, 43, 22, 0.65)" >发布时间：</span> {{article.pub_time|date:"Y-m-d"}}</a></li>
+                <li><span style="color:  rgba(171, 43, 22, 0.65)">分类：</span><a href="/category/{{article.category.alias}}">{{article.category}}</a></li>
+                <li class="hidden-xs"><a><span style="color: rgba(171, 43, 22, 0.65)" >发布时间：</span> {{article.create_time|date:"Y-m-d"}}</a></li>
                 <li class="pull-right hidden-xs"><a>
                     <span style="color:  rgba(171, 43, 22, 0.65)">访问量：</span>
                     {{article.read_times}}
@@ -41,6 +126,17 @@
                     {% autoescape off%}
                     {{article.content_html|safe}}
                     {% endautoescape %}
+                      <div class="pay" style="text-align:center;">
+                    --------EOF---------
+                    <br/>
+                    本文微信分享/扫码阅读
+                    <div id="qrcode">
+                         <img style="color: #cc1c28" src="{{ article.qrcode_url }}" width="60%"/>
+                    </div>
+<div style="text-align:left">
+<wb:share-button appkey="3669797968" addition="full" type="button" ralateUid="2721409931" default_text="分享文章：{{article.title}}"></wb:share-button>
+</div>
+                </div>
                 </div>
                 <br>
 
@@ -58,10 +154,89 @@
 
                     {% endif %}
                 </ul>
-                 {% include "include/share.html"%}
-                <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="{{  article.id }}" data-title="{{ article.title }}" data-url="{{article.absolute_url}}"></div>
-<!-- 多说评论框 end -->
+                 {#  <!-- {% include "include/share.html"%} -->#}
+              <div>
+                <strong style="margin-top: 50px;font-size: 18px;font-weight: 400; margin-bottom: -18px;display: block">文章评论</strong>
+                <hr style="display: block">
+              </div>
+                <div class="row" id="vcomments">
+                <input type="hidden" v-model="articleid" value="{{ article.id }}">
+                <input type="hidden" v-model="comment.csrftoken" value="{{ request.COOKIES.csrftoken }}">
+                <div v-if="no_comments" style="margin-left: 5%;font-size: 20px;color: #0a95cc">
+                    暂时无评论，快在文章下面留言吧。
+                </div>
+                <div v-else class="comment" v-for="comment in comments">
+                    <div class="commentheader">
+                     <img class="authorimg" src="${comment.author.fields.avator}}" >
+                            <strong class="authorheader">${comment.author.fields.name}}</strong>
+
+                        <span class="commentcreatetime">${comment.create_time}}</span>
+
+                    </div>
+                    <div class="comment-content">
+                        ${comment.content}}&nbsp;
+                        <div class="actions" style="display: inline-block">
+                            <a style="color: #0000ee" class="reply" href="#idcomment"
+                               @click="replycomment(comment.id, comment.author.pk,comment.author.fields.name)">回复</a>
+                        </div>
+
+                    </div>
+                    <div style="margin-left: 4%" class="commentreply" v-for="reply in comment.replies">
+                        <div class="commentheader">
+                        <img class="authorimg" src="${reply.author.fields.avator}}" >
+
+
+                                <strong class="authorheader">${reply.author.fields.name}} @ ${reply.reply_to.fields.name}}</strong>
+
+                            <span class="commentcreatetime">${reply.create_time}}</span>
+
+
+                        </div>
+                        <div class="comment-content">
+                            ${reply.content}}&nbsp;
+                        <div class="actions" style="display: inline-block">
+                            <a style="color: #0000ee" class="reply" href="#idcomment"
+                               @click="replycomment(comment.id, reply.author.pk,reply.author.fields.name)">回复</a>
+                        </div>
+
+                            </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 150px">
+                     {% if not user.is_authenticated %}
+                         {% if not request.session.commenttoken %}
+                             <div class="row">
+                                    <div class="col s1"></div>
+                                  <div class="input-field col s5">
+                                       <input id="last_name" type="text" class="validate" v-model="comment.username">
+                                      <label for="last_name">用户名</label>
+                                 </div>
+                                    <div class="input-field col s5">
+                                       <input id="guestemail" type="email" class="validate" v-model="comment.useremail">
+                                      <label for="guestemail" data-error="格式错误" data-success="正确">邮箱*</label>
+                                 </div>
+                             </div>
+                         {% else %}
+                             <label></label>
+                         {% endif %}
+                    {% endif %}
+                    <div class="row">
+                        <div class="col s1" style="margin-left: 10px">
+                         <a class="comment avatar">
+                              <img src="/static/img/hbnn.ico" width="35px" class="ui small rounded image">
+                            </a>
+                        </div>
+                         <div class="input-field col s8">
+                           <textarea class="materialize-textarea" id="idcomment" v-model="comment.content"></textarea>
+                            <label for="idcomment">${title}}</label>
+                         </div>
+                        <div class="col s1">
+                            <button id="cobtn" class="btn waves-effect waves-light" @click="createcomment">回复</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
 
@@ -69,29 +244,24 @@
 
     </div>
 
-    <div id="vmaig-side" class="col-md-4 col-lg-3 hidden-xs">
-          {% include "include/search.html"%}
-          {% include "include/author_info.html"%}
+    <div id="dailyblog-side" class="col-md-4 col-lg-3 hidden-xs">
+          {% include "include/article_search.html"%}
+        {% include "include/author_info.html"%}
+        {% include "include/weiboshow.html"%}
+        {% include "include/latest_comments.html"%}
+
           {% include "include/hottest_articles.html"%}
-          {% include "include/latest_comments.html"%}
+          {% include "include/categories.html"%}
+
+
 
     </div>
 </div>
+
+
 {% endblock %}
 
-{% block css%}
-<link type="text/css" rel="stylesheet" href="/static/syntaxhighlighter/styles/shCoreDefault.css"/>
-<style type="text/css">
-    #article {
-        font-size:14px;
-        color:#000;
-    }
 
-    blockquote {
-        font-size:14px;
-    }
-</style>
-{% endblock %}
 
 
 {% block js%}
@@ -103,4 +273,12 @@
 <script type="text/javascript" src="/static/syntaxhighlighter/scripts/shBrushPowerShell.js"></script>
 <script type="text/javascript" src="/static/syntaxhighlighter/scripts/shBrushJScript.js"></script>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
+        <script src="/static/jquery/jquery-2.1.3.min.js"></script>
+    <script src="/static/jquery/jquery.cookie.js"></script>
+
+<script src="/static/js/vue.js"></script>
+<script src="/static/js/vue-resource.min.js"></script>
+<script src="/static/js/materialize.min.js"></script>
+<script src="/static/js/sco.message.min.js"></script>
+<script src="/static/js/vuecomment.js"></script>
 {% endblock%}

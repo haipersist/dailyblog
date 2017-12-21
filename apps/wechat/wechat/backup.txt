@@ -1,0 +1,4 @@
+reply = "<xml><ToUserName><![CDATA[%s]]></ToUserName><FromUserName><![CDATA[%s]]></FromUserName><CreateTime>%s</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[%s]]></Content><FuncFlag>0</FuncFlag></xml>"  
+  response = make_response( reply % (FromUserName, ToUserName, str(int(time.time())), Content ) )  
+  response.content_type = 'application/xml'  
+  return response  

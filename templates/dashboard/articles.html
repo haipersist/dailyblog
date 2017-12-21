@@ -62,7 +62,6 @@
                                     <tr>
                                         <th>标题</th>
                                         <th>分类</th>
-                                        <th>标签</th>
                                         <th>发表时间</th>
                                         <th style="text-align: center">操作</th>
                                     </tr>
@@ -70,9 +69,10 @@
                                 <tbody>
                                     {% for article in article_list %}
                                         <tr>
-                                            <td>{{ article.title }}</td>
+                                            {% url 'article-detail-view' article.alias as article_url %}
+
+                                            <td><a href="{{article_url}}">{{ article.title }}</a></td>
                                             <td>{{ article.category}}</td>
-                                            <td>{{ article.tags}}</td>
                                             <td>{{ article.pub_time|date:"Y-m-d"}}</td>
                                             <td align="center">
                                               <ul>
@@ -100,6 +100,9 @@
                                             </td>
                                         </tr>
                                 {% endfor %}
+                                    {% if page_obj%}
+                                      {% include "include/pagination.html"%}
+                                    {% endif %}
                                 </tbody>
                             </table>
                         </div>

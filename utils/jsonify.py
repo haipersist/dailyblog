@@ -1,4 +1,16 @@
 #-*-coding:utf-8-*-
+"""
+
+the func is gotten from Flask,I can construct json data.
+
+it's created by the time when I started to learn Django.
+maybe ,it's my habbit.
+
+In fact,Django also provides json format---JsonResponse
+
+
+ :copyright: (c) 2016 by Haibo Wang.
+"""
 import json
 
 

@@ -18,7 +18,7 @@
         <div class="post-info">
             <span>
                 <span class="glyphicon glyphicon-calendar"></span>
-                {{post.pub_time|date:"Y-m-d" }}
+                {{post.create_time|date:"Y-m-d" }}
             </span>
             <span>
                 <span class="glyphicon glyphicon-eye-open"></span>
@@ -47,11 +47,12 @@
                 <p>
                 {{post.abstract|slice:"200" |safe}}
                 </p>
-                <a type="button" class="btn btn-dailyblog pull-right"  href="{{article_url}}">阅读全文</a>
 
             </div>
         </div>
     </div>
+                <a type="button" class="btn btn-dailyblog pull-right"  href="{{article_url}}">阅读全文</a>
+
 </div>
 
 

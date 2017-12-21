@@ -62,19 +62,19 @@
                         <fieldset>
                             <legend>修改信息</legend>
                               <div class="form-group">
-                                {{form.last_name.errors}}
+                                {{user_form.last_name.errors}}
                                 <label class="col-lg-2 control-label" for="focusedInput">姓氏：</label>
                                 <div class="col-lg-10">
                                    {% csrf_token %}
-                                  {{form.last_name}}
+                                  {{user_form.last_name}}
                                 </div>
                             </div>
                               <div class="form-group">
-                                {{form.first_name.errors}}
+                                {{user_form.first_name.errors}}
                                 <label class="col-lg-2 control-label" for="focusedInput">名字：</label>
                                 <div class="col-lg-10">
                                    {% csrf_token %}
-                                  {{form.first_name}}
+                                  {{user_form.first_name}}
                                 </div>
                             </div>
 

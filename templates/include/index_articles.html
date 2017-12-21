@@ -1,0 +1,47 @@
+
+<div id="index_articles">
+    <div >
+
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
+        <div class="heading">
+          <ul class="nav nav-tabs">
+            <li class="active" style="color: #cba00d;font-size: 18px"><a href="#tab1" data-toggle="tab">热门文章</a></li>
+            <li style="color: #cba00e;font-size: 18px"><a href="#tab2"  data-toggle="tab">最新文章</a></li>
+          </ul>
+        </div>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+          {% with post_list=article_list %}
+                {% for post in post_list %}
+                    {% include "include/home_post.html" %}
+                {% endfor %}
+                {% endwith %}
+
+                <!--分页 -->
+                {% if page_obj%}
+                    {% if not keyword %}
+                        {% include "include/pagination.html"%}
+                    {% else %}
+                        {% include "include/keywordpagination.html"%}
+                    {% endif %}
+                {% endif %}
+        </div>
+        <div class="tab-pane" id="tab2">
+          {% with latest_list=latest_articles %}
+                {% for post in latest_list %}
+                    {% include "include/home_post.html" %}
+                {% endfor %}
+                {% endwith %}
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+

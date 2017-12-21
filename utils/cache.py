@@ -2,62 +2,77 @@
 
 """
     cache.py
-    the cache is used to cache some view functions inorder to avoid wasting resources when requesting the same one
+    the cache is used to cache some view functions inorder to
+    avoid wasting resources when requesting the same one  and lower visit time
     in short serid time.
 
 
+ :copyright: (c) 2017 by Haibo Wang.
 """
 
 
 import functools
 import hashlib
 import logging
-from time import time
 from django.core.cache import caches
+
+
+
+
 
 
 logger = logging.getLogger(__name__)
 
 
-try:
-    import cPickle as pickle
-except ImportError:  # pragma: no cover
-    import pickle
-
-
 
 class Cache(object):
+    """
+    I use proxy design pattern to write the class.
+    the Cache is the proxy of django cache.
+    It can do all that django cache does.
+    In additions,it provides a decorator usdt to
+    decorate view function.
 
-    def __init__(self):
-        self._set_cache()
+    """
+    def __init__(self,cache_type='memcache'):
+        self._set_cache(cache_type)
 
-    def _set_cache(self):
-        try:
-            self.cache = caches['memcache']
-        except:
-            self.cache = caches['default']
+    def _set_cache(self,cache_type):
+        self.cache = caches[cache_type]
 
-    def get(self,*args,**kwargs):
+    def get(self,key,default=None):
         #Proxy function for some cache
-        self.cache.get(*args,**kwargs)
+        return self.cache.get(key,default=default)
 
-    def set(self,*args, **kwargs):
+    def set(self, key, value,timeout=500):
         #Proxy function for some cache
-        self.cache.set(*args, **kwargs)
+        self.cache.set(key, value,timeout=timeout)
 
     def delete(self,key):
         #Proxy function for some cache
-        pass
+        self.cache.delete(key)
+
+    def get_many(self,keys):
+        return self.cache.get_many(keys)
 
     def clear(self):
         #Proxy function for some cache
-        pass
+        self.cache.clear()
+
+    def close(self):
+        self.cache.close()
+
 
     def create_cache_key(self,key):
         return hashlib.md5(key).hexdigest()
 
-    def cached(self,timeout=None):
-        #decorator for view functions
+    def cached(self,timeout=300):
+        """
+        decorator for view functions
+
+        :param timeout:the expire time for some view function
+        :return: the decorator
+        """
         def decorator(func):
             @functools.wraps(func)
             def wrapper(*args,**kwargs):

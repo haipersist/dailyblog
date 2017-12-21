@@ -1,0 +1,123 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}<title>工作信息</title>{% endblock %}
+{%block css %}
+ <link rel="stylesheet" media="screen" href="/static/dashboard/css/custom.css">
+ <link rel="stylesheet" href="/static/css/dashboard.css">
+ <link rel="stylesheet" media="screen" href="/static/dashboard/vendors/easypiechart/jquery.easy-pie-chart.css">
+<link rel="stylesheet" media="screen" href="/static/dashboard/vendors/easypiechart/jquery.easy-pie-chart_custom.css">
+
+{%endblock%}
+
+
+{% block js %}
+    <script src="/static/highcharts/js/highcharts.js"></script>
+    <script src="/static/highcharts/js/modules/data.js"></script>
+    <script src="/static/highcharts/js/modules/exporting.js"></script>
+    <script src="/static/js/job_ajax.js"></script>
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+          <div class="row">
+                <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="text-muted bootstrap-admin-box-title">个人信息</div>
+                                </div>
+                                <div class="bootstrap-admin-panel-content">
+                                    <ul>
+                                        <li>职位总数：
+                                        </li>
+                                        <br>
+                                        <li>公司总数</li>
+                                        <br>
+                                        <li></li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+               <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="text-muted bootstrap-admin-box-title">统计信息</div>
+                                </div>
+                                <div class="bootstrap-admin-panel-content">
+                                     <ul>
+                                        <li>公司</li>
+                                         <br>
+                                         <br>
+
+                                        <li>最后发表时间：{{ last_pub_time|date:"Y-m-d" }}</li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+          </div>
+
+         <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="text-muted bootstrap-admin-box-title">发布文章时间图</div>
+                                    <div style="margin-left: 15%">
+                                     {% csrf_token %}
+
+                                        <label>开始日期:</label>
+                                        <input type="text" id="graghstartday" value={{ startday }}>
+                                        <label>&nbsp;结束日期:</label>
+                                         <input type="text" id="graghendday" value={{ endday }}>
+                                    <button id="job-graph-button">查询</button>
+                                    </div>
+                                </div>
+                                <div id="jobtitle"></div>
+                                <div id="jobcontainer"></div>
+                            </div>
+                        </div>
+          </div>
+
+         <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="text-muted bootstrap-admin-box-title">工作列表</div>
+                                    <div style="margin-left: 15%">
+                                     {% csrf_token %}
+                                        
+                                        <label>开始日期:</label>
+                                        <input type="text" id="startday" value={{ startday }}>
+                                        <label>&nbsp;结束日期:</label>
+                                         <input type="text" id="endday" value={{ endday }}>
+                                    <button id="job-table-button">查询</button>
+                                    </div>
+                                                              </div>
+                                <div class="bootstrap-admin-panel-content">
+                                    <table class="table table-hover" id="jobtable">
+                                        <thead>
+                                            <tr>
+                                                <th>标题</th>
+                                                <th>公司</th>
+                                                <th>薪水</th>
+                                                <th>网站来源</th>
+                                                <th>发布时间</th>
+                                                <th>链接</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody id="job-result">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+         </div>
+
+{% endblock %}

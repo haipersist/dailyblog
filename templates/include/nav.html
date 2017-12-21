@@ -1,14 +1,14 @@
-{% url 'index-view' as index_url %}
+{% url 'web-index-view' as index_url %}
 {% url 'changepwd-view' as changepwd_url %}
 
 
 
-<header id="top" class="navbar navbar-default navbar-fixed-top navbar-dailyblog">
+<nav id="navbar-top" class="navbar navbar-default navbar-fixed-top navbar-dailyblog">
     <div class="container">
         <div class="navbar-header">
             <div class="navbar-brand">{{website_name}}</div>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>
                 <a href="{{index_url}}">
@@ -20,13 +20,30 @@
             <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                     <span class="glyphicon glyphicon-list"></span>
-                    导航</a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    {% for category in categories %}
-                      <li><a href="{% url 'category-article-list-view' category.alias%}">{{category.name}}</a></li>
-                      {% endfor %}
+                    分类导航</a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dailycategory">
                   </ul>
             </li>
+                <li>
+                <a href="/trip/">
+                    游记
+                </a>
+                </li>
+                <li>
+                <a href="{% url 'category-article-list-view' 'dairy'%}">
+                    我的日记
+                </a>
+                </li>
+                 <li>
+                <a href="/author/">
+                    作者介绍
+                </a>
+                </li>
+                <li>
+                <a href="{% url 'category-article-list-view' 'software'%}">
+                    软件包
+                </a>
+                </li>
             <li>
                 <a href="{% url 'category-article-list-view' 'Django'%}">
                     Django
@@ -37,16 +54,21 @@
                     Web开发
                 </a>
                 </li>
-                 <li>
-                <a href="{% url 'category-article-list-view' 'dairy'%}">
-                    随笔
+                <li>
+                <a href="/advise/">
+                    吐槽网站
                 </a>
                 </li>
-                 <li>
-                <a href="/author/">
-                    作者介绍
-                </a>
-                </li>
+               <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <span class="glyphicon glyphicon-list"></span>
+                    文学</a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="{% url 'category-article-list-view' "mingrenzuopin"%}">名人作品</a></li>
+                      <li><a href="{% url 'category-article-list-view' "youxiuwenzhang"%}">优秀文章</a></li>
+                      <li><a href="{% url 'category-article-list-view' "jingdianyulu"%}">经典语录</a></li>
+                  </ul>
+            </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if not user.is_authenticated %}
@@ -56,7 +78,7 @@
                     </a>
                 </li>
                 <li>
-                    <a  href="/account/register" style="padding-right:0px;cursor:pointer">
+                    <a  href="/account/register/" style="padding-right:0px;cursor:pointer">
                     注册
                     </a>
                 </li>
@@ -80,7 +102,15 @@
             </ul>
         </div>
     </div>
-</header>
+{% if messages %}
+  {% for message in messages %}
+    <div id='message-alert' class='alert alert-success'>
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+</nav>
 
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" 
     aria-labelledby="myModalLabel" aria-hidden="true">
@@ -185,7 +215,7 @@
     $('#login-form').submit(function(){
         $.ajax({
             type:"POST",
-            url:"/logins/",
+            url:"/account/ajax_login/",
             data:{"username":$("#login-username").val(),"password":$("#login-password").val()},
             beforeSend:function(xhr){
                 xhr.setRequestHeader("X-CSRFToken", $.cookie('csrftoken'));
