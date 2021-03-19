@@ -14,7 +14,7 @@ gunicorn==19.6.0
 html5lib==0.999
 httplib2==0.8
 itsdangerous==0.24
-Jinja2==2.8
+Jinja2==2.11.3
 lxml==3.7.1
 Mako==1.0.4
 Markdown==2.6.6
