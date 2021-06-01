@@ -27,7 +27,7 @@ qrcode==5.3
 requests==2.18.3
 six==1.5.2
 supervisor==3.3.0
-urllib3==1.22
+urllib3==1.26.5
 weiborobot==1.1.3
 
 
