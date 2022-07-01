@@ -26,7 +26,7 @@ qcloud-cos-v4==0.0.22
 qrcode==5.3
 requests==2.18.3
 six==1.5.2
-supervisor==3.3.0
+supervisor==3.3.3
 urllib3==1.22
 weiborobot==1.1.3
 
